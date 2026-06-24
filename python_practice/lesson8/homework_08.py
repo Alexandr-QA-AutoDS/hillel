@@ -17,7 +17,7 @@ class Student:
 
 
 student = Student('Oleksandr', 'QA', 34)
-student.gpa = 3
+student.change_gpa(3)
 print(f"Student name: {student.name}")
 print(f"Student second name: {student.second_name}")
 print(f"Student age: {student.age}")
