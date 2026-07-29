@@ -70,7 +70,7 @@ for num in EvenIterator(8):
 
 def log_sum_of_two_num(function):
     def wrapper(*args, **kwargs):
-        print(f"Aргументи: {args}")
+        print(f"Аргументи: {args}, {kwargs}")
         result = function(*args, **kwargs)
         print(f"Результат: {result}")
         return result
