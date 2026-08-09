@@ -2,10 +2,10 @@ import psycopg2
 
 # Параметри підключення
 # База даних повинна існувати на зазначеному хості, та юзер повинен мати право на читання цього запису
-dbname = 'hillel_05_25_2026'
-user = 'postgres'
-password = '2410ghjnjy'
-host = '127.0.0.1'
+dbname = 'online_shop'
+user = 'aleksandrromancuk'
+password = ''
+host = 'localhost'
 port = '5432'
 
 # Спроба підключитись до бази даних
@@ -24,16 +24,18 @@ try:
 
     # Для виконання SQL запитів ви можете викликати метод execute() курсора
     # Тут можна виконати будь який запит на мові SQL, і він виконається в БД
-    cursor.execute("SELECT * FROM public.users")
-
-    # Отримання результатів запиту
+    cursor.execute("SELECT * FROM products p JOIN categories c ON p.category_id = c.id")
     records = cursor.fetchall()
     print(records)
-    cursor.execute("SELECT * FROM public.users WHERE id=1")
-    record = cursor.fetchone()
-    print(record)
-    cursor.execute("""insert into public.users ("name") values ('Den');""")
-    connection.commit() #механізм підтвердження транзакції
+
+    # # Отримання результатів запиту
+    # records = cursor.fetchall()
+    # print(records)
+    # cursor.execute("SELECT * FROM public.users WHERE id=1")
+    # record = cursor.fetchone()
+    # print(record)
+    # cursor.execute("""insert into public.users ("name") values ('Den');""")
+    # connection.commit() #механізм підтвердження транзакції
 
 
 except (Exception, psycopg2.Error) as error:
