@@ -1,2 +1,0 @@
-pip install dynaconf
-pip install dynaconf[ini]

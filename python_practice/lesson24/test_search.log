@@ -1,0 +1,3507 @@
+2026-08-21 21:26:41 - INFO - cars_search - ============================== START TEST SESSION ==============================
+2026-08-21 21:26:41 - INFO - cars_search - Setup: створюємо requests.Session і виконуємо POST /auth
+2026-08-21 21:26:41 - DEBUG - cars_search - POST /auth -> 200, body: {
+  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc4NzM0MDQwMSwianRpIjoiZmFmYWIwZWQtMTJiMy00NjNmLWFhNzEtY2ExYjQyMjAwNGIwIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6InRlc3RfdXNlciIsIm5iZiI6MTc4NzM0MDQwMSwiY3NyZiI6ImUzOWJjZmVmLTg1NTItNDQ1NS1hZGYyLTQxMzRlMGYzZjlkYyIsImV4cCI6MTc4NzM0MTMwMX0.YZrmtf7JtWkbVE0Umi8fw1Bs0vw8vbTl23kPV_xK_Xc"
+}
+
+2026-08-21 21:26:41 - INFO - cars_search - Токен отримано, довжина: 336
+2026-08-21 21:26:41 - INFO - cars_search - GET /cars з параметрами: {'sort_by': 'price', 'limit': 5}
+2026-08-21 21:26:41 - DEBUG - cars_search - URL запиту: http://127.0.0.1:8080/cars?sort_by=price&limit=5
+2026-08-21 21:26:41 - DEBUG - cars_search - Статус: 200, тіло: [
+  {
+    "brand": "Chevrolet",
+    "engine_volume": 1.8,
+    "price": 28000,
+    "year": 2018
+  },
+  {
+    "brand": "Hyundai",
+    "engine_volume": 1.6,
+    "price": 29000,
+    "year": 2020
+  },
+  {
+    "brand": "Honda",
+    "engine_volume": 1.6,
+    "price": 30000,
+    "year": 2016
+  },
+  {
+    "brand": "Kia",
+    "engine_volume": 2.0,
+    "price": 31000,
+    "year": 2019
+  },
+  {
+    "brand": "Ford",
+    "engine_volume": 2.2,
+    "price": 32000,
+    "year": 2015
+  }
+]
+
+2026-08-21 21:26:41 - INFO - cars_search - Отримано машин: 5, очікувалось: 5
+2026-08-21 21:26:41 - INFO - cars_search - Порядок за полем 'price': [28000, 29000, 30000, 31000, 32000]
+2026-08-21 21:26:41 - INFO - cars_search - GET /cars з параметрами: {'sort_by': 'year', 'limit': 10}
+2026-08-21 21:26:41 - DEBUG - cars_search - URL запиту: http://127.0.0.1:8080/cars?sort_by=year&limit=10
+2026-08-21 21:26:41 - DEBUG - cars_search - Статус: 200, тіло: [
+  {
+    "brand": "Ford",
+    "engine_volume": 2.2,
+    "price": 32000,
+    "year": 2015
+  },
+  {
+    "brand": "Honda",
+    "engine_volume": 1.6,
+    "price": 30000,
+    "year": 2016
+  },
+  {
+    "brand": "Toyota",
+    "engine_volume": 2.4,
+    "price": 35000,
+    "year": 2017
+  },
+  {
+    "brand": "Subaru",
+    "engine_volume": 2.5,
+    "price": 40000,
+    "year": 2017
+  },
+  {
+    "brand": "BMW",
+    "engine_volume": 2.0,
+    "price": 50000,
+    "year": 2018
+  },
+  {
+    "brand": "Chevrolet",
+    "engine_volume": 1.8,
+    "price": 28000,
+    "year": 2018
+  },
+  {
+    "brand": "Mazda",
+    "engine_volume": 2.0,
+    "price": 32000,
+    "year": 2018
+  },
+  {
+    "brand": "Jeep",
+    "engine_volume": 3.6,
+    "price": 45000,
+    "year": 2018
+  },
+  {
+    "brand": "Mercedes",
+    "engine_volume": 2.5,
+    "price": 55000,
+    "year": 2019
+  },
+  {
+    "brand": "Volkswagen",
+    "engine_volume": 2.0,
+    "price": 33000,
+    "year": 2019
+  }
+]
+
+2026-08-21 21:26:41 - INFO - cars_search - Отримано машин: 10, очікувалось: 10
+2026-08-21 21:26:41 - INFO - cars_search - Порядок за полем 'year': [2015, 2016, 2017, 2017, 2018, 2018, 2018, 2018, 2019, 2019]
+2026-08-21 21:26:41 - INFO - cars_search - GET /cars з параметрами: {'sort_by': 'engine_volume', 'limit': 3}
+2026-08-21 21:26:41 - DEBUG - cars_search - URL запиту: http://127.0.0.1:8080/cars?sort_by=engine_volume&limit=3
+2026-08-21 21:26:41 - DEBUG - cars_search - Статус: 200, тіло: [
+  {
+    "brand": "Tesla",
+    "engine_volume": 0.0,
+    "price": 80000,
+    "year": 2020
+  },
+  {
+    "brand": "Nissan",
+    "engine_volume": 1.5,
+    "price": 40000,
+    "year": 2021
+  },
+  {
+    "brand": "Honda",
+    "engine_volume": 1.6,
+    "price": 30000,
+    "year": 2016
+  }
+]
+
+2026-08-21 21:26:41 - INFO - cars_search - Отримано машин: 3, очікувалось: 3
+2026-08-21 21:26:41 - INFO - cars_search - Порядок за полем 'engine_volume': [0.0, 1.5, 1.6]
+2026-08-21 21:26:41 - INFO - cars_search - GET /cars з параметрами: {'sort_by': 'brand', 'limit': 1}
+2026-08-21 21:26:41 - DEBUG - cars_search - URL запиту: http://127.0.0.1:8080/cars?sort_by=brand&limit=1
+2026-08-21 21:26:41 - DEBUG - cars_search - Статус: 200, тіло: [
+  {
+    "brand": "Acura",
+    "engine_volume": 2.4,
+    "price": 48000,
+    "year": 2020
+  }
+]
+
+2026-08-21 21:26:41 - INFO - cars_search - Отримано машин: 1, очікувалось: 1
+2026-08-21 21:26:41 - INFO - cars_search - Порядок за полем 'brand': ['Acura']
+2026-08-21 21:26:41 - INFO - cars_search - GET /cars з параметрами: {'sort_by': 'price', 'limit': 25}
+2026-08-21 21:26:41 - DEBUG - cars_search - URL запиту: http://127.0.0.1:8080/cars?sort_by=price&limit=25
+2026-08-21 21:26:41 - DEBUG - cars_search - Статус: 200, тіло: [
+  {
+    "brand": "Chevrolet",
+    "engine_volume": 1.8,
+    "price": 28000,
+    "year": 2018
+  },
+  {
+    "brand": "Hyundai",
+    "engine_volume": 1.6,
+    "price": 29000,
+    "year": 2020
+  },
+  {
+    "brand": "Honda",
+    "engine_volume": 1.6,
+    "price": 30000,
+    "year": 2016
+  },
+  {
+    "brand": "Kia",
+    "engine_volume": 2.0,
+    "price": 31000,
+    "year": 2019
+  },
+  {
+    "brand": "Ford",
+    "engine_volume": 2.2,
+    "price": 32000,
+    "year": 2015
+  },
+  {
+    "brand": "Mazda",
+    "engine_volume": 2.0,
+    "price": 32000,
+    "year": 2018
+  },
+  {
+    "brand": "Volkswagen",
+    "engine_volume": 2.0,
+    "price": 33000,
+    "year": 2019
+  },
+  {
+    "brand": "Toyota",
+    "engine_volume": 2.4,
+    "price": 35000,
+    "year": 2017
+  },
+  {
+    "brand": "Nissan",
+    "engine_volume": 1.5,
+    "price": 40000,
+    "year": 2021
+  },
+  {
+    "brand": "Subaru",
+    "engine_volume": 2.5,
+    "price": 40000,
+    "year": 2017
+  },
+  {
+    "brand": "Audi",
+    "engine_volume": 1.8,
+    "price": 45000,
+    "year": 2020
+  },
+  {
+    "brand": "Jeep",
+    "engine_volume": 3.6,
+    "price": 45000,
+    "year": 2018
+  },
+  {
+    "brand": "Volvo",
+    "engine_volume": 2.0,
+    "price": 46000,
+    "year": 2019
+  },
+  {
+    "brand": "Acura",
+    "engine_volume": 2.4,
+    "price": 48000,
+    "year": 2020
+  },
+  {
+    "brand": "BMW",
+    "engine_volume": 2.0,
+    "price": 50000,
+    "year": 2018
+  },
+  {
+    "brand": "Infiniti",
+    "engine_volume": 3.5,
+    "price": 52000,
+    "year": 2019
+  },
+  {
+    "brand": "Mercedes",
+    "engine_volume": 2.5,
+    "price": 55000,
+    "year": 2019
+  },
+  {
+    "brand": "Land Rover",
+    "engine_volume": 2.0,
+    "price": 55000,
+    "year": 2020
+  },
+  {
+    "brand": "Lexus",
+    "engine_volume": 3.0,
+    "price": 60000,
+    "year": 2021
+  },
+  {
+    "brand": "Porsche",
+    "engine_volume": 3.0,
+    "price": 70000,
+    "year": 2021
+  },
+  {
+    "brand": "Tesla",
+    "engine_volume": 0.0,
+    "price": 80000,
+    "year": 2020
+  },
+  {
+    "brand": "Ferrari",
+    "engine_volume": 6.3,
+    "price": 250000,
+    "year": 2021
+  },
+  {
+    "brand": "McLaren",
+    "engine_volume": 4.0,
+    "price": 280000,
+    "year": 2021
+  },
+  {
+    "brand": "Lamborghini",
+    "engine_volume": 6.5,
+    "price": 300000,
+    "year": 2020
+  },
+  {
+    "brand": "Bugatti",
+    "engine_volume": 8.0,
+    "price": 350000,
+    "year": 2019
+  }
+]
+
+2026-08-21 21:26:41 - INFO - cars_search - Отримано машин: 25, очікувалось: 25
+2026-08-21 21:26:41 - INFO - cars_search - Порядок за полем 'price': [28000, 29000, 30000, 31000, 32000, 32000, 33000, 35000, 40000, 40000, 45000, 45000, 46000, 48000, 50000, 52000, 55000, 55000, 60000, 70000, 80000, 250000, 280000, 300000, 350000]
+2026-08-21 21:26:41 - INFO - cars_search - GET /cars з параметрами: {'limit': 4}
+2026-08-21 21:26:41 - DEBUG - cars_search - URL запиту: http://127.0.0.1:8080/cars?limit=4
+2026-08-21 21:26:41 - DEBUG - cars_search - Статус: 200, тіло: [
+  {
+    "brand": "Acura",
+    "engine_volume": 2.4,
+    "price": 48000,
+    "year": 2020
+  },
+  {
+    "brand": "Audi",
+    "engine_volume": 1.8,
+    "price": 45000,
+    "year": 2020
+  },
+  {
+    "brand": "BMW",
+    "engine_volume": 2.0,
+    "price": 50000,
+    "year": 2018
+  },
+  {
+    "brand": "Bugatti",
+    "engine_volume": 8.0,
+    "price": 350000,
+    "year": 2019
+  }
+]
+
+2026-08-21 21:26:41 - INFO - cars_search - Отримано машин: 4, очікувалось: 4
+2026-08-21 21:26:41 - INFO - cars_search - Порядок за полем 'brand': ['Acura', 'Audi', 'BMW', 'Bugatti']
+2026-08-21 21:26:41 - INFO - cars_search - GET /cars з параметрами: {'sort_by': 'price'}
+2026-08-21 21:26:41 - DEBUG - cars_search - URL запиту: http://127.0.0.1:8080/cars?sort_by=price
+2026-08-21 21:26:41 - DEBUG - cars_search - Статус: 200, тіло: [
+  {
+    "brand": "Chevrolet",
+    "engine_volume": 1.8,
+    "price": 28000,
+    "year": 2018
+  },
+  {
+    "brand": "Hyundai",
+    "engine_volume": 1.6,
+    "price": 29000,
+    "year": 2020
+  },
+  {
+    "brand": "Honda",
+    "engine_volume": 1.6,
+    "price": 30000,
+    "year": 2016
+  },
+  {
+    "brand": "Kia",
+    "engine_volume": 2.0,
+    "price": 31000,
+    "year": 2019
+  },
+  {
+    "brand": "Ford",
+    "engine_volume": 2.2,
+    "price": 32000,
+    "year": 2015
+  },
+  {
+    "brand": "Mazda",
+    "engine_volume": 2.0,
+    "price": 32000,
+    "year": 2018
+  },
+  {
+    "brand": "Volkswagen",
+    "engine_volume": 2.0,
+    "price": 33000,
+    "year": 2019
+  },
+  {
+    "brand": "Toyota",
+    "engine_volume": 2.4,
+    "price": 35000,
+    "year": 2017
+  },
+  {
+    "brand": "Nissan",
+    "engine_volume": 1.5,
+    "price": 40000,
+    "year": 2021
+  },
+  {
+    "brand": "Subaru",
+    "engine_volume": 2.5,
+    "price": 40000,
+    "year": 2017
+  },
+  {
+    "brand": "Audi",
+    "engine_volume": 1.8,
+    "price": 45000,
+    "year": 2020
+  },
+  {
+    "brand": "Jeep",
+    "engine_volume": 3.6,
+    "price": 45000,
+    "year": 2018
+  },
+  {
+    "brand": "Volvo",
+    "engine_volume": 2.0,
+    "price": 46000,
+    "year": 2019
+  },
+  {
+    "brand": "Acura",
+    "engine_volume": 2.4,
+    "price": 48000,
+    "year": 2020
+  },
+  {
+    "brand": "BMW",
+    "engine_volume": 2.0,
+    "price": 50000,
+    "year": 2018
+  },
+  {
+    "brand": "Infiniti",
+    "engine_volume": 3.5,
+    "price": 52000,
+    "year": 2019
+  },
+  {
+    "brand": "Mercedes",
+    "engine_volume": 2.5,
+    "price": 55000,
+    "year": 2019
+  },
+  {
+    "brand": "Land Rover",
+    "engine_volume": 2.0,
+    "price": 55000,
+    "year": 2020
+  },
+  {
+    "brand": "Lexus",
+    "engine_volume": 3.0,
+    "price": 60000,
+    "year": 2021
+  },
+  {
+    "brand": "Porsche",
+    "engine_volume": 3.0,
+    "price": 70000,
+    "year": 2021
+  },
+  {
+    "brand": "Tesla",
+    "engine_volume": 0.0,
+    "price": 80000,
+    "year": 2020
+  },
+  {
+    "brand": "Ferrari",
+    "engine_volume": 6.3,
+    "price": 250000,
+    "year": 2021
+  },
+  {
+    "brand": "McLaren",
+    "engine_volume": 4.0,
+    "price": 280000,
+    "year": 2021
+  },
+  {
+    "brand": "Lamborghini",
+    "engine_volume": 6.5,
+    "price": 300000,
+    "year": 2020
+  },
+  {
+    "brand": "Bugatti",
+    "engine_volume": 8.0,
+    "price": 350000,
+    "year": 2019
+  }
+]
+
+2026-08-21 21:26:41 - INFO - cars_search - Отримано машин: 25, очікувалось: 25
+2026-08-21 21:26:41 - INFO - cars_search - Порядок за полем 'price': [28000, 29000, 30000, 31000, 32000, 32000, 33000, 35000, 40000, 40000, 45000, 45000, 46000, 48000, 50000, 52000, 55000, 55000, 60000, 70000, 80000, 250000, 280000, 300000, 350000]
+2026-08-21 21:26:41 - INFO - cars_search - GET /cars без токена - очікуємо 401
+2026-08-21 21:26:41 - DEBUG - cars_search - Статус: 401, тіло: {
+  "msg": "Missing Authorization Header"
+}
+
+2026-08-21 21:26:41 - INFO - cars_search - Teardown: закриваємо сесію
+2026-08-21 21:26:41 - INFO - cars_search - ============================== END TEST SESSION ==============================
+2026-08-21 21:26:54 - INFO - cars_search - ============================== START TEST SESSION ==============================
+2026-08-21 21:26:54 - INFO - cars_search - Setup: створюємо requests.Session і виконуємо POST /auth
+2026-08-21 21:26:54 - DEBUG - cars_search - POST /auth -> 200, body: {
+  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc4NzM0MDQxNCwianRpIjoiNTViZmMwMTQtZTIyZi00YjhiLThhODctYTExNDI1NGRjZTI5IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6InRlc3RfdXNlciIsIm5iZiI6MTc4NzM0MDQxNCwiY3NyZiI6IjYzODc5ODBhLTI0YmEtNDlhOC05YjE4LTNjZDEzYmI5MTU2OCIsImV4cCI6MTc4NzM0MTMxNH0.BDL3D0T3cIfV7dLmm1_5Lh14FmS5fpKrgNOEfGCdEoU"
+}
+
+2026-08-21 21:26:54 - INFO - cars_search - Токен отримано, довжина: 336
+2026-08-21 21:26:54 - INFO - cars_search - GET /cars з параметрами: {'sort_by': 'price', 'limit': 5}
+2026-08-21 21:26:54 - DEBUG - cars_search - URL запиту: http://127.0.0.1:8080/cars?sort_by=price&limit=5
+2026-08-21 21:26:54 - DEBUG - cars_search - Статус: 200, тіло: [
+  {
+    "brand": "Chevrolet",
+    "engine_volume": 1.8,
+    "price": 28000,
+    "year": 2018
+  },
+  {
+    "brand": "Hyundai",
+    "engine_volume": 1.6,
+    "price": 29000,
+    "year": 2020
+  },
+  {
+    "brand": "Honda",
+    "engine_volume": 1.6,
+    "price": 30000,
+    "year": 2016
+  },
+  {
+    "brand": "Kia",
+    "engine_volume": 2.0,
+    "price": 31000,
+    "year": 2019
+  },
+  {
+    "brand": "Ford",
+    "engine_volume": 2.2,
+    "price": 32000,
+    "year": 2015
+  }
+]
+
+2026-08-21 21:26:54 - INFO - cars_search - Отримано машин: 5, очікувалось: 5
+2026-08-21 21:26:54 - INFO - cars_search - Порядок за полем 'price': [28000, 29000, 30000, 31000, 32000]
+2026-08-21 21:26:54 - INFO - cars_search - GET /cars з параметрами: {'sort_by': 'year', 'limit': 10}
+2026-08-21 21:26:54 - DEBUG - cars_search - URL запиту: http://127.0.0.1:8080/cars?sort_by=year&limit=10
+2026-08-21 21:26:54 - DEBUG - cars_search - Статус: 200, тіло: [
+  {
+    "brand": "Ford",
+    "engine_volume": 2.2,
+    "price": 32000,
+    "year": 2015
+  },
+  {
+    "brand": "Honda",
+    "engine_volume": 1.6,
+    "price": 30000,
+    "year": 2016
+  },
+  {
+    "brand": "Toyota",
+    "engine_volume": 2.4,
+    "price": 35000,
+    "year": 2017
+  },
+  {
+    "brand": "Subaru",
+    "engine_volume": 2.5,
+    "price": 40000,
+    "year": 2017
+  },
+  {
+    "brand": "BMW",
+    "engine_volume": 2.0,
+    "price": 50000,
+    "year": 2018
+  },
+  {
+    "brand": "Chevrolet",
+    "engine_volume": 1.8,
+    "price": 28000,
+    "year": 2018
+  },
+  {
+    "brand": "Mazda",
+    "engine_volume": 2.0,
+    "price": 32000,
+    "year": 2018
+  },
+  {
+    "brand": "Jeep",
+    "engine_volume": 3.6,
+    "price": 45000,
+    "year": 2018
+  },
+  {
+    "brand": "Mercedes",
+    "engine_volume": 2.5,
+    "price": 55000,
+    "year": 2019
+  },
+  {
+    "brand": "Volkswagen",
+    "engine_volume": 2.0,
+    "price": 33000,
+    "year": 2019
+  }
+]
+
+2026-08-21 21:26:54 - INFO - cars_search - Отримано машин: 10, очікувалось: 10
+2026-08-21 21:26:54 - INFO - cars_search - Порядок за полем 'year': [2015, 2016, 2017, 2017, 2018, 2018, 2018, 2018, 2019, 2019]
+2026-08-21 21:26:54 - INFO - cars_search - GET /cars з параметрами: {'sort_by': 'engine_volume', 'limit': 3}
+2026-08-21 21:26:54 - DEBUG - cars_search - URL запиту: http://127.0.0.1:8080/cars?sort_by=engine_volume&limit=3
+2026-08-21 21:26:54 - DEBUG - cars_search - Статус: 200, тіло: [
+  {
+    "brand": "Tesla",
+    "engine_volume": 0.0,
+    "price": 80000,
+    "year": 2020
+  },
+  {
+    "brand": "Nissan",
+    "engine_volume": 1.5,
+    "price": 40000,
+    "year": 2021
+  },
+  {
+    "brand": "Honda",
+    "engine_volume": 1.6,
+    "price": 30000,
+    "year": 2016
+  }
+]
+
+2026-08-21 21:26:54 - INFO - cars_search - Отримано машин: 3, очікувалось: 3
+2026-08-21 21:26:54 - INFO - cars_search - Порядок за полем 'engine_volume': [0.0, 1.5, 1.6]
+2026-08-21 21:26:54 - INFO - cars_search - GET /cars з параметрами: {'sort_by': 'brand', 'limit': 1}
+2026-08-21 21:26:54 - DEBUG - cars_search - URL запиту: http://127.0.0.1:8080/cars?sort_by=brand&limit=1
+2026-08-21 21:26:54 - DEBUG - cars_search - Статус: 200, тіло: [
+  {
+    "brand": "Acura",
+    "engine_volume": 2.4,
+    "price": 48000,
+    "year": 2020
+  }
+]
+
+2026-08-21 21:26:54 - INFO - cars_search - Отримано машин: 1, очікувалось: 1
+2026-08-21 21:26:54 - INFO - cars_search - Порядок за полем 'brand': ['Acura']
+2026-08-21 21:26:54 - INFO - cars_search - GET /cars з параметрами: {'sort_by': 'price', 'limit': 25}
+2026-08-21 21:26:54 - DEBUG - cars_search - URL запиту: http://127.0.0.1:8080/cars?sort_by=price&limit=25
+2026-08-21 21:26:54 - DEBUG - cars_search - Статус: 200, тіло: [
+  {
+    "brand": "Chevrolet",
+    "engine_volume": 1.8,
+    "price": 28000,
+    "year": 2018
+  },
+  {
+    "brand": "Hyundai",
+    "engine_volume": 1.6,
+    "price": 29000,
+    "year": 2020
+  },
+  {
+    "brand": "Honda",
+    "engine_volume": 1.6,
+    "price": 30000,
+    "year": 2016
+  },
+  {
+    "brand": "Kia",
+    "engine_volume": 2.0,
+    "price": 31000,
+    "year": 2019
+  },
+  {
+    "brand": "Ford",
+    "engine_volume": 2.2,
+    "price": 32000,
+    "year": 2015
+  },
+  {
+    "brand": "Mazda",
+    "engine_volume": 2.0,
+    "price": 32000,
+    "year": 2018
+  },
+  {
+    "brand": "Volkswagen",
+    "engine_volume": 2.0,
+    "price": 33000,
+    "year": 2019
+  },
+  {
+    "brand": "Toyota",
+    "engine_volume": 2.4,
+    "price": 35000,
+    "year": 2017
+  },
+  {
+    "brand": "Nissan",
+    "engine_volume": 1.5,
+    "price": 40000,
+    "year": 2021
+  },
+  {
+    "brand": "Subaru",
+    "engine_volume": 2.5,
+    "price": 40000,
+    "year": 2017
+  },
+  {
+    "brand": "Audi",
+    "engine_volume": 1.8,
+    "price": 45000,
+    "year": 2020
+  },
+  {
+    "brand": "Jeep",
+    "engine_volume": 3.6,
+    "price": 45000,
+    "year": 2018
+  },
+  {
+    "brand": "Volvo",
+    "engine_volume": 2.0,
+    "price": 46000,
+    "year": 2019
+  },
+  {
+    "brand": "Acura",
+    "engine_volume": 2.4,
+    "price": 48000,
+    "year": 2020
+  },
+  {
+    "brand": "BMW",
+    "engine_volume": 2.0,
+    "price": 50000,
+    "year": 2018
+  },
+  {
+    "brand": "Infiniti",
+    "engine_volume": 3.5,
+    "price": 52000,
+    "year": 2019
+  },
+  {
+    "brand": "Mercedes",
+    "engine_volume": 2.5,
+    "price": 55000,
+    "year": 2019
+  },
+  {
+    "brand": "Land Rover",
+    "engine_volume": 2.0,
+    "price": 55000,
+    "year": 2020
+  },
+  {
+    "brand": "Lexus",
+    "engine_volume": 3.0,
+    "price": 60000,
+    "year": 2021
+  },
+  {
+    "brand": "Porsche",
+    "engine_volume": 3.0,
+    "price": 70000,
+    "year": 2021
+  },
+  {
+    "brand": "Tesla",
+    "engine_volume": 0.0,
+    "price": 80000,
+    "year": 2020
+  },
+  {
+    "brand": "Ferrari",
+    "engine_volume": 6.3,
+    "price": 250000,
+    "year": 2021
+  },
+  {
+    "brand": "McLaren",
+    "engine_volume": 4.0,
+    "price": 280000,
+    "year": 2021
+  },
+  {
+    "brand": "Lamborghini",
+    "engine_volume": 6.5,
+    "price": 300000,
+    "year": 2020
+  },
+  {
+    "brand": "Bugatti",
+    "engine_volume": 8.0,
+    "price": 350000,
+    "year": 2019
+  }
+]
+
+2026-08-21 21:26:54 - INFO - cars_search - Отримано машин: 25, очікувалось: 25
+2026-08-21 21:26:54 - INFO - cars_search - Порядок за полем 'price': [28000, 29000, 30000, 31000, 32000, 32000, 33000, 35000, 40000, 40000, 45000, 45000, 46000, 48000, 50000, 52000, 55000, 55000, 60000, 70000, 80000, 250000, 280000, 300000, 350000]
+2026-08-21 21:26:54 - INFO - cars_search - GET /cars з параметрами: {'limit': 4}
+2026-08-21 21:26:54 - DEBUG - cars_search - URL запиту: http://127.0.0.1:8080/cars?limit=4
+2026-08-21 21:26:54 - DEBUG - cars_search - Статус: 200, тіло: [
+  {
+    "brand": "Acura",
+    "engine_volume": 2.4,
+    "price": 48000,
+    "year": 2020
+  },
+  {
+    "brand": "Audi",
+    "engine_volume": 1.8,
+    "price": 45000,
+    "year": 2020
+  },
+  {
+    "brand": "BMW",
+    "engine_volume": 2.0,
+    "price": 50000,
+    "year": 2018
+  },
+  {
+    "brand": "Bugatti",
+    "engine_volume": 8.0,
+    "price": 350000,
+    "year": 2019
+  }
+]
+
+2026-08-21 21:26:54 - INFO - cars_search - Отримано машин: 4, очікувалось: 4
+2026-08-21 21:26:54 - INFO - cars_search - Порядок за полем 'brand': ['Acura', 'Audi', 'BMW', 'Bugatti']
+2026-08-21 21:26:54 - INFO - cars_search - GET /cars з параметрами: {'sort_by': 'price'}
+2026-08-21 21:26:54 - DEBUG - cars_search - URL запиту: http://127.0.0.1:8080/cars?sort_by=price
+2026-08-21 21:26:54 - DEBUG - cars_search - Статус: 200, тіло: [
+  {
+    "brand": "Chevrolet",
+    "engine_volume": 1.8,
+    "price": 28000,
+    "year": 2018
+  },
+  {
+    "brand": "Hyundai",
+    "engine_volume": 1.6,
+    "price": 29000,
+    "year": 2020
+  },
+  {
+    "brand": "Honda",
+    "engine_volume": 1.6,
+    "price": 30000,
+    "year": 2016
+  },
+  {
+    "brand": "Kia",
+    "engine_volume": 2.0,
+    "price": 31000,
+    "year": 2019
+  },
+  {
+    "brand": "Ford",
+    "engine_volume": 2.2,
+    "price": 32000,
+    "year": 2015
+  },
+  {
+    "brand": "Mazda",
+    "engine_volume": 2.0,
+    "price": 32000,
+    "year": 2018
+  },
+  {
+    "brand": "Volkswagen",
+    "engine_volume": 2.0,
+    "price": 33000,
+    "year": 2019
+  },
+  {
+    "brand": "Toyota",
+    "engine_volume": 2.4,
+    "price": 35000,
+    "year": 2017
+  },
+  {
+    "brand": "Nissan",
+    "engine_volume": 1.5,
+    "price": 40000,
+    "year": 2021
+  },
+  {
+    "brand": "Subaru",
+    "engine_volume": 2.5,
+    "price": 40000,
+    "year": 2017
+  },
+  {
+    "brand": "Audi",
+    "engine_volume": 1.8,
+    "price": 45000,
+    "year": 2020
+  },
+  {
+    "brand": "Jeep",
+    "engine_volume": 3.6,
+    "price": 45000,
+    "year": 2018
+  },
+  {
+    "brand": "Volvo",
+    "engine_volume": 2.0,
+    "price": 46000,
+    "year": 2019
+  },
+  {
+    "brand": "Acura",
+    "engine_volume": 2.4,
+    "price": 48000,
+    "year": 2020
+  },
+  {
+    "brand": "BMW",
+    "engine_volume": 2.0,
+    "price": 50000,
+    "year": 2018
+  },
+  {
+    "brand": "Infiniti",
+    "engine_volume": 3.5,
+    "price": 52000,
+    "year": 2019
+  },
+  {
+    "brand": "Mercedes",
+    "engine_volume": 2.5,
+    "price": 55000,
+    "year": 2019
+  },
+  {
+    "brand": "Land Rover",
+    "engine_volume": 2.0,
+    "price": 55000,
+    "year": 2020
+  },
+  {
+    "brand": "Lexus",
+    "engine_volume": 3.0,
+    "price": 60000,
+    "year": 2021
+  },
+  {
+    "brand": "Porsche",
+    "engine_volume": 3.0,
+    "price": 70000,
+    "year": 2021
+  },
+  {
+    "brand": "Tesla",
+    "engine_volume": 0.0,
+    "price": 80000,
+    "year": 2020
+  },
+  {
+    "brand": "Ferrari",
+    "engine_volume": 6.3,
+    "price": 250000,
+    "year": 2021
+  },
+  {
+    "brand": "McLaren",
+    "engine_volume": 4.0,
+    "price": 280000,
+    "year": 2021
+  },
+  {
+    "brand": "Lamborghini",
+    "engine_volume": 6.5,
+    "price": 300000,
+    "year": 2020
+  },
+  {
+    "brand": "Bugatti",
+    "engine_volume": 8.0,
+    "price": 350000,
+    "year": 2019
+  }
+]
+
+2026-08-21 21:26:54 - INFO - cars_search - Отримано машин: 25, очікувалось: 25
+2026-08-21 21:26:54 - INFO - cars_search - Порядок за полем 'price': [28000, 29000, 30000, 31000, 32000, 32000, 33000, 35000, 40000, 40000, 45000, 45000, 46000, 48000, 50000, 52000, 55000, 55000, 60000, 70000, 80000, 250000, 280000, 300000, 350000]
+2026-08-21 21:26:54 - INFO - cars_search - GET /cars без токена - очікуємо 401
+2026-08-21 21:26:54 - DEBUG - cars_search - Статус: 401, тіло: {
+  "msg": "Missing Authorization Header"
+}
+
+2026-08-21 21:26:54 - INFO - cars_search - Teardown: закриваємо сесію
+2026-08-21 21:26:54 - INFO - cars_search - ============================== END TEST SESSION ==============================
+2026-08-21 21:27:10 - INFO - cars_search - ============================== START TEST SESSION ==============================
+2026-08-21 21:27:10 - INFO - cars_search - Setup: створюємо requests.Session і виконуємо POST /auth
+2026-08-21 21:27:10 - DEBUG - cars_search - POST /auth -> 200, body: {
+  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc4NzM0MDQzMCwianRpIjoiNmQ1YWYyZjktMDI4NC00NjYyLTkyNTEtNTkwZmRkZDdhZGQzIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6InRlc3RfdXNlciIsIm5iZiI6MTc4NzM0MDQzMCwiY3NyZiI6ImI2NDlkZWNkLTA5YjgtNDg4ZC1iZDdjLWQ0MzZmYjYzOTM5ZCIsImV4cCI6MTc4NzM0MTMzMH0.gdBNcP_G3JeSsU_Ciqn3dvwBygTQzkdYRle9FIDsisI"
+}
+
+2026-08-21 21:27:10 - INFO - cars_search - Токен отримано, довжина: 336
+2026-08-21 21:27:10 - INFO - cars_search - GET /cars з параметрами: {'sort_by': 'price', 'limit': 5}
+2026-08-21 21:27:10 - DEBUG - cars_search - URL запиту: http://127.0.0.1:8080/cars?sort_by=price&limit=5
+2026-08-21 21:27:10 - DEBUG - cars_search - Статус: 200, тіло: [
+  {
+    "brand": "Chevrolet",
+    "engine_volume": 1.8,
+    "price": 28000,
+    "year": 2018
+  },
+  {
+    "brand": "Hyundai",
+    "engine_volume": 1.6,
+    "price": 29000,
+    "year": 2020
+  },
+  {
+    "brand": "Honda",
+    "engine_volume": 1.6,
+    "price": 30000,
+    "year": 2016
+  },
+  {
+    "brand": "Kia",
+    "engine_volume": 2.0,
+    "price": 31000,
+    "year": 2019
+  },
+  {
+    "brand": "Ford",
+    "engine_volume": 2.2,
+    "price": 32000,
+    "year": 2015
+  }
+]
+
+2026-08-21 21:27:10 - INFO - cars_search - Отримано машин: 5, очікувалось: 5
+2026-08-21 21:27:10 - INFO - cars_search - Порядок за полем 'price': [28000, 29000, 30000, 31000, 32000]
+2026-08-21 21:27:10 - INFO - cars_search - GET /cars з параметрами: {'sort_by': 'year', 'limit': 10}
+2026-08-21 21:27:10 - DEBUG - cars_search - URL запиту: http://127.0.0.1:8080/cars?sort_by=year&limit=10
+2026-08-21 21:27:10 - DEBUG - cars_search - Статус: 200, тіло: [
+  {
+    "brand": "Ford",
+    "engine_volume": 2.2,
+    "price": 32000,
+    "year": 2015
+  },
+  {
+    "brand": "Honda",
+    "engine_volume": 1.6,
+    "price": 30000,
+    "year": 2016
+  },
+  {
+    "brand": "Toyota",
+    "engine_volume": 2.4,
+    "price": 35000,
+    "year": 2017
+  },
+  {
+    "brand": "Subaru",
+    "engine_volume": 2.5,
+    "price": 40000,
+    "year": 2017
+  },
+  {
+    "brand": "BMW",
+    "engine_volume": 2.0,
+    "price": 50000,
+    "year": 2018
+  },
+  {
+    "brand": "Chevrolet",
+    "engine_volume": 1.8,
+    "price": 28000,
+    "year": 2018
+  },
+  {
+    "brand": "Mazda",
+    "engine_volume": 2.0,
+    "price": 32000,
+    "year": 2018
+  },
+  {
+    "brand": "Jeep",
+    "engine_volume": 3.6,
+    "price": 45000,
+    "year": 2018
+  },
+  {
+    "brand": "Mercedes",
+    "engine_volume": 2.5,
+    "price": 55000,
+    "year": 2019
+  },
+  {
+    "brand": "Volkswagen",
+    "engine_volume": 2.0,
+    "price": 33000,
+    "year": 2019
+  }
+]
+
+2026-08-21 21:27:10 - INFO - cars_search - Отримано машин: 10, очікувалось: 10
+2026-08-21 21:27:10 - INFO - cars_search - Порядок за полем 'year': [2015, 2016, 2017, 2017, 2018, 2018, 2018, 2018, 2019, 2019]
+2026-08-21 21:27:10 - INFO - cars_search - GET /cars з параметрами: {'sort_by': 'engine_volume', 'limit': 3}
+2026-08-21 21:27:10 - DEBUG - cars_search - URL запиту: http://127.0.0.1:8080/cars?sort_by=engine_volume&limit=3
+2026-08-21 21:27:10 - DEBUG - cars_search - Статус: 200, тіло: [
+  {
+    "brand": "Tesla",
+    "engine_volume": 0.0,
+    "price": 80000,
+    "year": 2020
+  },
+  {
+    "brand": "Nissan",
+    "engine_volume": 1.5,
+    "price": 40000,
+    "year": 2021
+  },
+  {
+    "brand": "Honda",
+    "engine_volume": 1.6,
+    "price": 30000,
+    "year": 2016
+  }
+]
+
+2026-08-21 21:27:10 - INFO - cars_search - Отримано машин: 3, очікувалось: 3
+2026-08-21 21:27:10 - INFO - cars_search - Порядок за полем 'engine_volume': [0.0, 1.5, 1.6]
+2026-08-21 21:27:10 - INFO - cars_search - GET /cars з параметрами: {'sort_by': 'brand', 'limit': 1}
+2026-08-21 21:27:10 - DEBUG - cars_search - URL запиту: http://127.0.0.1:8080/cars?sort_by=brand&limit=1
+2026-08-21 21:27:10 - DEBUG - cars_search - Статус: 200, тіло: [
+  {
+    "brand": "Acura",
+    "engine_volume": 2.4,
+    "price": 48000,
+    "year": 2020
+  }
+]
+
+2026-08-21 21:27:10 - INFO - cars_search - Отримано машин: 1, очікувалось: 1
+2026-08-21 21:27:10 - INFO - cars_search - Порядок за полем 'brand': ['Acura']
+2026-08-21 21:27:10 - INFO - cars_search - GET /cars з параметрами: {'sort_by': 'price', 'limit': 25}
+2026-08-21 21:27:10 - DEBUG - cars_search - URL запиту: http://127.0.0.1:8080/cars?sort_by=price&limit=25
+2026-08-21 21:27:10 - DEBUG - cars_search - Статус: 200, тіло: [
+  {
+    "brand": "Chevrolet",
+    "engine_volume": 1.8,
+    "price": 28000,
+    "year": 2018
+  },
+  {
+    "brand": "Hyundai",
+    "engine_volume": 1.6,
+    "price": 29000,
+    "year": 2020
+  },
+  {
+    "brand": "Honda",
+    "engine_volume": 1.6,
+    "price": 30000,
+    "year": 2016
+  },
+  {
+    "brand": "Kia",
+    "engine_volume": 2.0,
+    "price": 31000,
+    "year": 2019
+  },
+  {
+    "brand": "Ford",
+    "engine_volume": 2.2,
+    "price": 32000,
+    "year": 2015
+  },
+  {
+    "brand": "Mazda",
+    "engine_volume": 2.0,
+    "price": 32000,
+    "year": 2018
+  },
+  {
+    "brand": "Volkswagen",
+    "engine_volume": 2.0,
+    "price": 33000,
+    "year": 2019
+  },
+  {
+    "brand": "Toyota",
+    "engine_volume": 2.4,
+    "price": 35000,
+    "year": 2017
+  },
+  {
+    "brand": "Nissan",
+    "engine_volume": 1.5,
+    "price": 40000,
+    "year": 2021
+  },
+  {
+    "brand": "Subaru",
+    "engine_volume": 2.5,
+    "price": 40000,
+    "year": 2017
+  },
+  {
+    "brand": "Audi",
+    "engine_volume": 1.8,
+    "price": 45000,
+    "year": 2020
+  },
+  {
+    "brand": "Jeep",
+    "engine_volume": 3.6,
+    "price": 45000,
+    "year": 2018
+  },
+  {
+    "brand": "Volvo",
+    "engine_volume": 2.0,
+    "price": 46000,
+    "year": 2019
+  },
+  {
+    "brand": "Acura",
+    "engine_volume": 2.4,
+    "price": 48000,
+    "year": 2020
+  },
+  {
+    "brand": "BMW",
+    "engine_volume": 2.0,
+    "price": 50000,
+    "year": 2018
+  },
+  {
+    "brand": "Infiniti",
+    "engine_volume": 3.5,
+    "price": 52000,
+    "year": 2019
+  },
+  {
+    "brand": "Mercedes",
+    "engine_volume": 2.5,
+    "price": 55000,
+    "year": 2019
+  },
+  {
+    "brand": "Land Rover",
+    "engine_volume": 2.0,
+    "price": 55000,
+    "year": 2020
+  },
+  {
+    "brand": "Lexus",
+    "engine_volume": 3.0,
+    "price": 60000,
+    "year": 2021
+  },
+  {
+    "brand": "Porsche",
+    "engine_volume": 3.0,
+    "price": 70000,
+    "year": 2021
+  },
+  {
+    "brand": "Tesla",
+    "engine_volume": 0.0,
+    "price": 80000,
+    "year": 2020
+  },
+  {
+    "brand": "Ferrari",
+    "engine_volume": 6.3,
+    "price": 250000,
+    "year": 2021
+  },
+  {
+    "brand": "McLaren",
+    "engine_volume": 4.0,
+    "price": 280000,
+    "year": 2021
+  },
+  {
+    "brand": "Lamborghini",
+    "engine_volume": 6.5,
+    "price": 300000,
+    "year": 2020
+  },
+  {
+    "brand": "Bugatti",
+    "engine_volume": 8.0,
+    "price": 350000,
+    "year": 2019
+  }
+]
+
+2026-08-21 21:27:10 - INFO - cars_search - Отримано машин: 25, очікувалось: 25
+2026-08-21 21:27:10 - INFO - cars_search - Порядок за полем 'price': [28000, 29000, 30000, 31000, 32000, 32000, 33000, 35000, 40000, 40000, 45000, 45000, 46000, 48000, 50000, 52000, 55000, 55000, 60000, 70000, 80000, 250000, 280000, 300000, 350000]
+2026-08-21 21:27:10 - INFO - cars_search - GET /cars з параметрами: {'limit': 4}
+2026-08-21 21:27:10 - DEBUG - cars_search - URL запиту: http://127.0.0.1:8080/cars?limit=4
+2026-08-21 21:27:10 - DEBUG - cars_search - Статус: 200, тіло: [
+  {
+    "brand": "Acura",
+    "engine_volume": 2.4,
+    "price": 48000,
+    "year": 2020
+  },
+  {
+    "brand": "Audi",
+    "engine_volume": 1.8,
+    "price": 45000,
+    "year": 2020
+  },
+  {
+    "brand": "BMW",
+    "engine_volume": 2.0,
+    "price": 50000,
+    "year": 2018
+  },
+  {
+    "brand": "Bugatti",
+    "engine_volume": 8.0,
+    "price": 350000,
+    "year": 2019
+  }
+]
+
+2026-08-21 21:27:10 - INFO - cars_search - Отримано машин: 4, очікувалось: 4
+2026-08-21 21:27:10 - INFO - cars_search - Порядок за полем 'brand': ['Acura', 'Audi', 'BMW', 'Bugatti']
+2026-08-21 21:27:10 - INFO - cars_search - GET /cars з параметрами: {'sort_by': 'price'}
+2026-08-21 21:27:10 - DEBUG - cars_search - URL запиту: http://127.0.0.1:8080/cars?sort_by=price
+2026-08-21 21:27:10 - DEBUG - cars_search - Статус: 200, тіло: [
+  {
+    "brand": "Chevrolet",
+    "engine_volume": 1.8,
+    "price": 28000,
+    "year": 2018
+  },
+  {
+    "brand": "Hyundai",
+    "engine_volume": 1.6,
+    "price": 29000,
+    "year": 2020
+  },
+  {
+    "brand": "Honda",
+    "engine_volume": 1.6,
+    "price": 30000,
+    "year": 2016
+  },
+  {
+    "brand": "Kia",
+    "engine_volume": 2.0,
+    "price": 31000,
+    "year": 2019
+  },
+  {
+    "brand": "Ford",
+    "engine_volume": 2.2,
+    "price": 32000,
+    "year": 2015
+  },
+  {
+    "brand": "Mazda",
+    "engine_volume": 2.0,
+    "price": 32000,
+    "year": 2018
+  },
+  {
+    "brand": "Volkswagen",
+    "engine_volume": 2.0,
+    "price": 33000,
+    "year": 2019
+  },
+  {
+    "brand": "Toyota",
+    "engine_volume": 2.4,
+    "price": 35000,
+    "year": 2017
+  },
+  {
+    "brand": "Nissan",
+    "engine_volume": 1.5,
+    "price": 40000,
+    "year": 2021
+  },
+  {
+    "brand": "Subaru",
+    "engine_volume": 2.5,
+    "price": 40000,
+    "year": 2017
+  },
+  {
+    "brand": "Audi",
+    "engine_volume": 1.8,
+    "price": 45000,
+    "year": 2020
+  },
+  {
+    "brand": "Jeep",
+    "engine_volume": 3.6,
+    "price": 45000,
+    "year": 2018
+  },
+  {
+    "brand": "Volvo",
+    "engine_volume": 2.0,
+    "price": 46000,
+    "year": 2019
+  },
+  {
+    "brand": "Acura",
+    "engine_volume": 2.4,
+    "price": 48000,
+    "year": 2020
+  },
+  {
+    "brand": "BMW",
+    "engine_volume": 2.0,
+    "price": 50000,
+    "year": 2018
+  },
+  {
+    "brand": "Infiniti",
+    "engine_volume": 3.5,
+    "price": 52000,
+    "year": 2019
+  },
+  {
+    "brand": "Mercedes",
+    "engine_volume": 2.5,
+    "price": 55000,
+    "year": 2019
+  },
+  {
+    "brand": "Land Rover",
+    "engine_volume": 2.0,
+    "price": 55000,
+    "year": 2020
+  },
+  {
+    "brand": "Lexus",
+    "engine_volume": 3.0,
+    "price": 60000,
+    "year": 2021
+  },
+  {
+    "brand": "Porsche",
+    "engine_volume": 3.0,
+    "price": 70000,
+    "year": 2021
+  },
+  {
+    "brand": "Tesla",
+    "engine_volume": 0.0,
+    "price": 80000,
+    "year": 2020
+  },
+  {
+    "brand": "Ferrari",
+    "engine_volume": 6.3,
+    "price": 250000,
+    "year": 2021
+  },
+  {
+    "brand": "McLaren",
+    "engine_volume": 4.0,
+    "price": 280000,
+    "year": 2021
+  },
+  {
+    "brand": "Lamborghini",
+    "engine_volume": 6.5,
+    "price": 300000,
+    "year": 2020
+  },
+  {
+    "brand": "Bugatti",
+    "engine_volume": 8.0,
+    "price": 350000,
+    "year": 2019
+  }
+]
+
+2026-08-21 21:27:10 - INFO - cars_search - Отримано машин: 25, очікувалось: 25
+2026-08-21 21:27:10 - INFO - cars_search - Порядок за полем 'price': [28000, 29000, 30000, 31000, 32000, 32000, 33000, 35000, 40000, 40000, 45000, 45000, 46000, 48000, 50000, 52000, 55000, 55000, 60000, 70000, 80000, 250000, 280000, 300000, 350000]
+2026-08-21 21:27:10 - INFO - cars_search - GET /cars без токена - очікуємо 401
+2026-08-21 21:27:10 - DEBUG - cars_search - Статус: 401, тіло: {
+  "msg": "Missing Authorization Header"
+}
+
+2026-08-21 21:27:10 - INFO - cars_search - Teardown: закриваємо сесію
+2026-08-21 21:27:10 - INFO - cars_search - ============================== END TEST SESSION ==============================
+2026-08-21 21:29:43 - INFO - cars_search - ============================== START TEST SESSION ==============================
+2026-08-21 21:29:43 - INFO - cars_search - Setup: створюємо requests.Session і виконуємо POST /auth
+2026-08-21 21:29:43 - DEBUG - cars_search - POST /auth -> 200, body: {
+  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc4NzM0MDU4MywianRpIjoiYTlmODFkMmItZjNmOC00NGVmLWFmNmItNjA1ZmJlOWIzMTQ2IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6InRlc3RfdXNlciIsIm5iZiI6MTc4NzM0MDU4MywiY3NyZiI6ImE2Y2M2ZDUzLWRhZTEtNGFmOS1iMTRiLTVmYjBjZDA4MjNlMiIsImV4cCI6MTc4NzM0MTQ4M30.JW9R-GyKu3zKTkHcC7qJCeSzfwFMjc0Z4WLJZ1ZcFys"
+}
+
+2026-08-21 21:29:43 - INFO - cars_search - Токен отримано, довжина: 336
+2026-08-21 21:29:43 - INFO - cars_search - GET /cars з параметрами: {'sort_by': 'price', 'limit': 5}
+2026-08-21 21:29:43 - DEBUG - cars_search - URL запиту: http://127.0.0.1:8080/cars?sort_by=price&limit=5
+2026-08-21 21:29:43 - DEBUG - cars_search - Статус: 200, тіло: [
+  {
+    "brand": "Chevrolet",
+    "engine_volume": 1.8,
+    "price": 28000,
+    "year": 2018
+  },
+  {
+    "brand": "Hyundai",
+    "engine_volume": 1.6,
+    "price": 29000,
+    "year": 2020
+  },
+  {
+    "brand": "Honda",
+    "engine_volume": 1.6,
+    "price": 30000,
+    "year": 2016
+  },
+  {
+    "brand": "Kia",
+    "engine_volume": 2.0,
+    "price": 31000,
+    "year": 2019
+  },
+  {
+    "brand": "Ford",
+    "engine_volume": 2.2,
+    "price": 32000,
+    "year": 2015
+  }
+]
+
+2026-08-21 21:29:43 - INFO - cars_search - Отримано машин: 5, очікувалось: 5
+2026-08-21 21:29:43 - INFO - cars_search - Порядок за полем 'price': [28000, 29000, 30000, 31000, 32000]
+2026-08-21 21:29:43 - INFO - cars_search - GET /cars з параметрами: {'sort_by': 'year', 'limit': 10}
+2026-08-21 21:29:43 - DEBUG - cars_search - URL запиту: http://127.0.0.1:8080/cars?sort_by=year&limit=10
+2026-08-21 21:29:43 - DEBUG - cars_search - Статус: 200, тіло: [
+  {
+    "brand": "Ford",
+    "engine_volume": 2.2,
+    "price": 32000,
+    "year": 2015
+  },
+  {
+    "brand": "Honda",
+    "engine_volume": 1.6,
+    "price": 30000,
+    "year": 2016
+  },
+  {
+    "brand": "Toyota",
+    "engine_volume": 2.4,
+    "price": 35000,
+    "year": 2017
+  },
+  {
+    "brand": "Subaru",
+    "engine_volume": 2.5,
+    "price": 40000,
+    "year": 2017
+  },
+  {
+    "brand": "BMW",
+    "engine_volume": 2.0,
+    "price": 50000,
+    "year": 2018
+  },
+  {
+    "brand": "Chevrolet",
+    "engine_volume": 1.8,
+    "price": 28000,
+    "year": 2018
+  },
+  {
+    "brand": "Mazda",
+    "engine_volume": 2.0,
+    "price": 32000,
+    "year": 2018
+  },
+  {
+    "brand": "Jeep",
+    "engine_volume": 3.6,
+    "price": 45000,
+    "year": 2018
+  },
+  {
+    "brand": "Mercedes",
+    "engine_volume": 2.5,
+    "price": 55000,
+    "year": 2019
+  },
+  {
+    "brand": "Volkswagen",
+    "engine_volume": 2.0,
+    "price": 33000,
+    "year": 2019
+  }
+]
+
+2026-08-21 21:29:43 - INFO - cars_search - Отримано машин: 10, очікувалось: 10
+2026-08-21 21:29:43 - INFO - cars_search - Порядок за полем 'year': [2015, 2016, 2017, 2017, 2018, 2018, 2018, 2018, 2019, 2019]
+2026-08-21 21:29:43 - INFO - cars_search - GET /cars з параметрами: {'sort_by': 'engine_volume', 'limit': 3}
+2026-08-21 21:29:43 - DEBUG - cars_search - URL запиту: http://127.0.0.1:8080/cars?sort_by=engine_volume&limit=3
+2026-08-21 21:29:43 - DEBUG - cars_search - Статус: 200, тіло: [
+  {
+    "brand": "Tesla",
+    "engine_volume": 0.0,
+    "price": 80000,
+    "year": 2020
+  },
+  {
+    "brand": "Nissan",
+    "engine_volume": 1.5,
+    "price": 40000,
+    "year": 2021
+  },
+  {
+    "brand": "Honda",
+    "engine_volume": 1.6,
+    "price": 30000,
+    "year": 2016
+  }
+]
+
+2026-08-21 21:29:43 - INFO - cars_search - Отримано машин: 3, очікувалось: 3
+2026-08-21 21:29:43 - INFO - cars_search - Порядок за полем 'engine_volume': [0.0, 1.5, 1.6]
+2026-08-21 21:29:43 - INFO - cars_search - GET /cars з параметрами: {'sort_by': 'brand', 'limit': 1}
+2026-08-21 21:29:43 - DEBUG - cars_search - URL запиту: http://127.0.0.1:8080/cars?sort_by=brand&limit=1
+2026-08-21 21:29:43 - DEBUG - cars_search - Статус: 200, тіло: [
+  {
+    "brand": "Acura",
+    "engine_volume": 2.4,
+    "price": 48000,
+    "year": 2020
+  }
+]
+
+2026-08-21 21:29:43 - INFO - cars_search - Отримано машин: 1, очікувалось: 1
+2026-08-21 21:29:43 - INFO - cars_search - Порядок за полем 'brand': ['Acura']
+2026-08-21 21:29:43 - INFO - cars_search - GET /cars з параметрами: {'sort_by': 'price', 'limit': 25}
+2026-08-21 21:29:43 - DEBUG - cars_search - URL запиту: http://127.0.0.1:8080/cars?sort_by=price&limit=25
+2026-08-21 21:29:43 - DEBUG - cars_search - Статус: 200, тіло: [
+  {
+    "brand": "Chevrolet",
+    "engine_volume": 1.8,
+    "price": 28000,
+    "year": 2018
+  },
+  {
+    "brand": "Hyundai",
+    "engine_volume": 1.6,
+    "price": 29000,
+    "year": 2020
+  },
+  {
+    "brand": "Honda",
+    "engine_volume": 1.6,
+    "price": 30000,
+    "year": 2016
+  },
+  {
+    "brand": "Kia",
+    "engine_volume": 2.0,
+    "price": 31000,
+    "year": 2019
+  },
+  {
+    "brand": "Ford",
+    "engine_volume": 2.2,
+    "price": 32000,
+    "year": 2015
+  },
+  {
+    "brand": "Mazda",
+    "engine_volume": 2.0,
+    "price": 32000,
+    "year": 2018
+  },
+  {
+    "brand": "Volkswagen",
+    "engine_volume": 2.0,
+    "price": 33000,
+    "year": 2019
+  },
+  {
+    "brand": "Toyota",
+    "engine_volume": 2.4,
+    "price": 35000,
+    "year": 2017
+  },
+  {
+    "brand": "Nissan",
+    "engine_volume": 1.5,
+    "price": 40000,
+    "year": 2021
+  },
+  {
+    "brand": "Subaru",
+    "engine_volume": 2.5,
+    "price": 40000,
+    "year": 2017
+  },
+  {
+    "brand": "Audi",
+    "engine_volume": 1.8,
+    "price": 45000,
+    "year": 2020
+  },
+  {
+    "brand": "Jeep",
+    "engine_volume": 3.6,
+    "price": 45000,
+    "year": 2018
+  },
+  {
+    "brand": "Volvo",
+    "engine_volume": 2.0,
+    "price": 46000,
+    "year": 2019
+  },
+  {
+    "brand": "Acura",
+    "engine_volume": 2.4,
+    "price": 48000,
+    "year": 2020
+  },
+  {
+    "brand": "BMW",
+    "engine_volume": 2.0,
+    "price": 50000,
+    "year": 2018
+  },
+  {
+    "brand": "Infiniti",
+    "engine_volume": 3.5,
+    "price": 52000,
+    "year": 2019
+  },
+  {
+    "brand": "Mercedes",
+    "engine_volume": 2.5,
+    "price": 55000,
+    "year": 2019
+  },
+  {
+    "brand": "Land Rover",
+    "engine_volume": 2.0,
+    "price": 55000,
+    "year": 2020
+  },
+  {
+    "brand": "Lexus",
+    "engine_volume": 3.0,
+    "price": 60000,
+    "year": 2021
+  },
+  {
+    "brand": "Porsche",
+    "engine_volume": 3.0,
+    "price": 70000,
+    "year": 2021
+  },
+  {
+    "brand": "Tesla",
+    "engine_volume": 0.0,
+    "price": 80000,
+    "year": 2020
+  },
+  {
+    "brand": "Ferrari",
+    "engine_volume": 6.3,
+    "price": 250000,
+    "year": 2021
+  },
+  {
+    "brand": "McLaren",
+    "engine_volume": 4.0,
+    "price": 280000,
+    "year": 2021
+  },
+  {
+    "brand": "Lamborghini",
+    "engine_volume": 6.5,
+    "price": 300000,
+    "year": 2020
+  },
+  {
+    "brand": "Bugatti",
+    "engine_volume": 8.0,
+    "price": 350000,
+    "year": 2019
+  }
+]
+
+2026-08-21 21:29:43 - INFO - cars_search - Отримано машин: 25, очікувалось: 25
+2026-08-21 21:29:43 - INFO - cars_search - Порядок за полем 'price': [28000, 29000, 30000, 31000, 32000, 32000, 33000, 35000, 40000, 40000, 45000, 45000, 46000, 48000, 50000, 52000, 55000, 55000, 60000, 70000, 80000, 250000, 280000, 300000, 350000]
+2026-08-21 21:29:43 - INFO - cars_search - GET /cars з параметрами: {'limit': 4}
+2026-08-21 21:29:43 - DEBUG - cars_search - URL запиту: http://127.0.0.1:8080/cars?limit=4
+2026-08-21 21:29:43 - DEBUG - cars_search - Статус: 200, тіло: [
+  {
+    "brand": "Acura",
+    "engine_volume": 2.4,
+    "price": 48000,
+    "year": 2020
+  },
+  {
+    "brand": "Audi",
+    "engine_volume": 1.8,
+    "price": 45000,
+    "year": 2020
+  },
+  {
+    "brand": "BMW",
+    "engine_volume": 2.0,
+    "price": 50000,
+    "year": 2018
+  },
+  {
+    "brand": "Bugatti",
+    "engine_volume": 8.0,
+    "price": 350000,
+    "year": 2019
+  }
+]
+
+2026-08-21 21:29:43 - INFO - cars_search - Отримано машин: 4, очікувалось: 4
+2026-08-21 21:29:43 - INFO - cars_search - Порядок за полем 'brand': ['Acura', 'Audi', 'BMW', 'Bugatti']
+2026-08-21 21:29:43 - INFO - cars_search - GET /cars з параметрами: {'sort_by': 'price'}
+2026-08-21 21:29:43 - DEBUG - cars_search - URL запиту: http://127.0.0.1:8080/cars?sort_by=price
+2026-08-21 21:29:43 - DEBUG - cars_search - Статус: 200, тіло: [
+  {
+    "brand": "Chevrolet",
+    "engine_volume": 1.8,
+    "price": 28000,
+    "year": 2018
+  },
+  {
+    "brand": "Hyundai",
+    "engine_volume": 1.6,
+    "price": 29000,
+    "year": 2020
+  },
+  {
+    "brand": "Honda",
+    "engine_volume": 1.6,
+    "price": 30000,
+    "year": 2016
+  },
+  {
+    "brand": "Kia",
+    "engine_volume": 2.0,
+    "price": 31000,
+    "year": 2019
+  },
+  {
+    "brand": "Ford",
+    "engine_volume": 2.2,
+    "price": 32000,
+    "year": 2015
+  },
+  {
+    "brand": "Mazda",
+    "engine_volume": 2.0,
+    "price": 32000,
+    "year": 2018
+  },
+  {
+    "brand": "Volkswagen",
+    "engine_volume": 2.0,
+    "price": 33000,
+    "year": 2019
+  },
+  {
+    "brand": "Toyota",
+    "engine_volume": 2.4,
+    "price": 35000,
+    "year": 2017
+  },
+  {
+    "brand": "Nissan",
+    "engine_volume": 1.5,
+    "price": 40000,
+    "year": 2021
+  },
+  {
+    "brand": "Subaru",
+    "engine_volume": 2.5,
+    "price": 40000,
+    "year": 2017
+  },
+  {
+    "brand": "Audi",
+    "engine_volume": 1.8,
+    "price": 45000,
+    "year": 2020
+  },
+  {
+    "brand": "Jeep",
+    "engine_volume": 3.6,
+    "price": 45000,
+    "year": 2018
+  },
+  {
+    "brand": "Volvo",
+    "engine_volume": 2.0,
+    "price": 46000,
+    "year": 2019
+  },
+  {
+    "brand": "Acura",
+    "engine_volume": 2.4,
+    "price": 48000,
+    "year": 2020
+  },
+  {
+    "brand": "BMW",
+    "engine_volume": 2.0,
+    "price": 50000,
+    "year": 2018
+  },
+  {
+    "brand": "Infiniti",
+    "engine_volume": 3.5,
+    "price": 52000,
+    "year": 2019
+  },
+  {
+    "brand": "Mercedes",
+    "engine_volume": 2.5,
+    "price": 55000,
+    "year": 2019
+  },
+  {
+    "brand": "Land Rover",
+    "engine_volume": 2.0,
+    "price": 55000,
+    "year": 2020
+  },
+  {
+    "brand": "Lexus",
+    "engine_volume": 3.0,
+    "price": 60000,
+    "year": 2021
+  },
+  {
+    "brand": "Porsche",
+    "engine_volume": 3.0,
+    "price": 70000,
+    "year": 2021
+  },
+  {
+    "brand": "Tesla",
+    "engine_volume": 0.0,
+    "price": 80000,
+    "year": 2020
+  },
+  {
+    "brand": "Ferrari",
+    "engine_volume": 6.3,
+    "price": 250000,
+    "year": 2021
+  },
+  {
+    "brand": "McLaren",
+    "engine_volume": 4.0,
+    "price": 280000,
+    "year": 2021
+  },
+  {
+    "brand": "Lamborghini",
+    "engine_volume": 6.5,
+    "price": 300000,
+    "year": 2020
+  },
+  {
+    "brand": "Bugatti",
+    "engine_volume": 8.0,
+    "price": 350000,
+    "year": 2019
+  }
+]
+
+2026-08-21 21:29:43 - INFO - cars_search - Отримано машин: 25, очікувалось: 25
+2026-08-21 21:29:43 - INFO - cars_search - Порядок за полем 'price': [28000, 29000, 30000, 31000, 32000, 32000, 33000, 35000, 40000, 40000, 45000, 45000, 46000, 48000, 50000, 52000, 55000, 55000, 60000, 70000, 80000, 250000, 280000, 300000, 350000]
+2026-08-21 21:29:43 - INFO - cars_search - GET /cars без токена - очікуємо 401
+2026-08-21 21:29:43 - DEBUG - cars_search - Статус: 401, тіло: {
+  "msg": "Missing Authorization Header"
+}
+
+2026-08-21 21:29:43 - INFO - cars_search - Teardown: закриваємо сесію
+2026-08-21 21:29:43 - INFO - cars_search - ============================== END TEST SESSION ==============================
+2026-08-21 21:29:53 - INFO - cars_search - ============================== START TEST SESSION ==============================
+2026-08-21 21:29:53 - INFO - cars_search - Setup: створюємо requests.Session і виконуємо POST /auth
+2026-08-21 21:29:53 - DEBUG - cars_search - POST /auth -> 200, body: {
+  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc4NzM0MDU5MywianRpIjoiMjc2M2JlYTYtNzRhZi00ODllLThiYjUtMDRjODY5ZjU2OGNjIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6InRlc3RfdXNlciIsIm5iZiI6MTc4NzM0MDU5MywiY3NyZiI6IjU0MjQzMzhmLTZiMDktNDQ4OC1iMDcwLWQ3MjI4YTI3ZDZmYSIsImV4cCI6MTc4NzM0MTQ5M30.WrGHICSondk_fc7dL1M3oBdSo-xfqEtL5AHry1TiH5k"
+}
+
+2026-08-21 21:29:53 - INFO - cars_search - Токен отримано, довжина: 336
+2026-08-21 21:29:53 - INFO - cars_search - GET /cars з параметрами: {'sort_by': 'price', 'limit': 5}
+2026-08-21 21:29:53 - DEBUG - cars_search - URL запиту: http://127.0.0.1:8080/cars?sort_by=price&limit=5
+2026-08-21 21:29:53 - DEBUG - cars_search - Статус: 200, тіло: [
+  {
+    "brand": "Chevrolet",
+    "engine_volume": 1.8,
+    "price": 28000,
+    "year": 2018
+  },
+  {
+    "brand": "Hyundai",
+    "engine_volume": 1.6,
+    "price": 29000,
+    "year": 2020
+  },
+  {
+    "brand": "Honda",
+    "engine_volume": 1.6,
+    "price": 30000,
+    "year": 2016
+  },
+  {
+    "brand": "Kia",
+    "engine_volume": 2.0,
+    "price": 31000,
+    "year": 2019
+  },
+  {
+    "brand": "Ford",
+    "engine_volume": 2.2,
+    "price": 32000,
+    "year": 2015
+  }
+]
+
+2026-08-21 21:29:53 - INFO - cars_search - Отримано машин: 5, очікувалось: 5
+2026-08-21 21:29:53 - INFO - cars_search - Порядок за полем 'price': [28000, 29000, 30000, 31000, 32000]
+2026-08-21 21:29:53 - INFO - cars_search - GET /cars з параметрами: {'sort_by': 'year', 'limit': 10}
+2026-08-21 21:29:53 - DEBUG - cars_search - URL запиту: http://127.0.0.1:8080/cars?sort_by=year&limit=10
+2026-08-21 21:29:53 - DEBUG - cars_search - Статус: 200, тіло: [
+  {
+    "brand": "Ford",
+    "engine_volume": 2.2,
+    "price": 32000,
+    "year": 2015
+  },
+  {
+    "brand": "Honda",
+    "engine_volume": 1.6,
+    "price": 30000,
+    "year": 2016
+  },
+  {
+    "brand": "Toyota",
+    "engine_volume": 2.4,
+    "price": 35000,
+    "year": 2017
+  },
+  {
+    "brand": "Subaru",
+    "engine_volume": 2.5,
+    "price": 40000,
+    "year": 2017
+  },
+  {
+    "brand": "BMW",
+    "engine_volume": 2.0,
+    "price": 50000,
+    "year": 2018
+  },
+  {
+    "brand": "Chevrolet",
+    "engine_volume": 1.8,
+    "price": 28000,
+    "year": 2018
+  },
+  {
+    "brand": "Mazda",
+    "engine_volume": 2.0,
+    "price": 32000,
+    "year": 2018
+  },
+  {
+    "brand": "Jeep",
+    "engine_volume": 3.6,
+    "price": 45000,
+    "year": 2018
+  },
+  {
+    "brand": "Mercedes",
+    "engine_volume": 2.5,
+    "price": 55000,
+    "year": 2019
+  },
+  {
+    "brand": "Volkswagen",
+    "engine_volume": 2.0,
+    "price": 33000,
+    "year": 2019
+  }
+]
+
+2026-08-21 21:29:53 - INFO - cars_search - Отримано машин: 10, очікувалось: 10
+2026-08-21 21:29:53 - INFO - cars_search - Порядок за полем 'year': [2015, 2016, 2017, 2017, 2018, 2018, 2018, 2018, 2019, 2019]
+2026-08-21 21:29:53 - INFO - cars_search - GET /cars з параметрами: {'sort_by': 'engine_volume', 'limit': 3}
+2026-08-21 21:29:53 - DEBUG - cars_search - URL запиту: http://127.0.0.1:8080/cars?sort_by=engine_volume&limit=3
+2026-08-21 21:29:53 - DEBUG - cars_search - Статус: 200, тіло: [
+  {
+    "brand": "Tesla",
+    "engine_volume": 0.0,
+    "price": 80000,
+    "year": 2020
+  },
+  {
+    "brand": "Nissan",
+    "engine_volume": 1.5,
+    "price": 40000,
+    "year": 2021
+  },
+  {
+    "brand": "Honda",
+    "engine_volume": 1.6,
+    "price": 30000,
+    "year": 2016
+  }
+]
+
+2026-08-21 21:29:53 - INFO - cars_search - Отримано машин: 3, очікувалось: 3
+2026-08-21 21:29:53 - INFO - cars_search - Порядок за полем 'engine_volume': [0.0, 1.5, 1.6]
+2026-08-21 21:29:53 - INFO - cars_search - GET /cars з параметрами: {'sort_by': 'brand', 'limit': 1}
+2026-08-21 21:29:53 - DEBUG - cars_search - URL запиту: http://127.0.0.1:8080/cars?sort_by=brand&limit=1
+2026-08-21 21:29:53 - DEBUG - cars_search - Статус: 200, тіло: [
+  {
+    "brand": "Acura",
+    "engine_volume": 2.4,
+    "price": 48000,
+    "year": 2020
+  }
+]
+
+2026-08-21 21:29:53 - INFO - cars_search - Отримано машин: 1, очікувалось: 1
+2026-08-21 21:29:53 - INFO - cars_search - Порядок за полем 'brand': ['Acura']
+2026-08-21 21:29:53 - INFO - cars_search - GET /cars з параметрами: {'sort_by': 'price', 'limit': 25}
+2026-08-21 21:29:53 - DEBUG - cars_search - URL запиту: http://127.0.0.1:8080/cars?sort_by=price&limit=25
+2026-08-21 21:29:53 - DEBUG - cars_search - Статус: 200, тіло: [
+  {
+    "brand": "Chevrolet",
+    "engine_volume": 1.8,
+    "price": 28000,
+    "year": 2018
+  },
+  {
+    "brand": "Hyundai",
+    "engine_volume": 1.6,
+    "price": 29000,
+    "year": 2020
+  },
+  {
+    "brand": "Honda",
+    "engine_volume": 1.6,
+    "price": 30000,
+    "year": 2016
+  },
+  {
+    "brand": "Kia",
+    "engine_volume": 2.0,
+    "price": 31000,
+    "year": 2019
+  },
+  {
+    "brand": "Ford",
+    "engine_volume": 2.2,
+    "price": 32000,
+    "year": 2015
+  },
+  {
+    "brand": "Mazda",
+    "engine_volume": 2.0,
+    "price": 32000,
+    "year": 2018
+  },
+  {
+    "brand": "Volkswagen",
+    "engine_volume": 2.0,
+    "price": 33000,
+    "year": 2019
+  },
+  {
+    "brand": "Toyota",
+    "engine_volume": 2.4,
+    "price": 35000,
+    "year": 2017
+  },
+  {
+    "brand": "Nissan",
+    "engine_volume": 1.5,
+    "price": 40000,
+    "year": 2021
+  },
+  {
+    "brand": "Subaru",
+    "engine_volume": 2.5,
+    "price": 40000,
+    "year": 2017
+  },
+  {
+    "brand": "Audi",
+    "engine_volume": 1.8,
+    "price": 45000,
+    "year": 2020
+  },
+  {
+    "brand": "Jeep",
+    "engine_volume": 3.6,
+    "price": 45000,
+    "year": 2018
+  },
+  {
+    "brand": "Volvo",
+    "engine_volume": 2.0,
+    "price": 46000,
+    "year": 2019
+  },
+  {
+    "brand": "Acura",
+    "engine_volume": 2.4,
+    "price": 48000,
+    "year": 2020
+  },
+  {
+    "brand": "BMW",
+    "engine_volume": 2.0,
+    "price": 50000,
+    "year": 2018
+  },
+  {
+    "brand": "Infiniti",
+    "engine_volume": 3.5,
+    "price": 52000,
+    "year": 2019
+  },
+  {
+    "brand": "Mercedes",
+    "engine_volume": 2.5,
+    "price": 55000,
+    "year": 2019
+  },
+  {
+    "brand": "Land Rover",
+    "engine_volume": 2.0,
+    "price": 55000,
+    "year": 2020
+  },
+  {
+    "brand": "Lexus",
+    "engine_volume": 3.0,
+    "price": 60000,
+    "year": 2021
+  },
+  {
+    "brand": "Porsche",
+    "engine_volume": 3.0,
+    "price": 70000,
+    "year": 2021
+  },
+  {
+    "brand": "Tesla",
+    "engine_volume": 0.0,
+    "price": 80000,
+    "year": 2020
+  },
+  {
+    "brand": "Ferrari",
+    "engine_volume": 6.3,
+    "price": 250000,
+    "year": 2021
+  },
+  {
+    "brand": "McLaren",
+    "engine_volume": 4.0,
+    "price": 280000,
+    "year": 2021
+  },
+  {
+    "brand": "Lamborghini",
+    "engine_volume": 6.5,
+    "price": 300000,
+    "year": 2020
+  },
+  {
+    "brand": "Bugatti",
+    "engine_volume": 8.0,
+    "price": 350000,
+    "year": 2019
+  }
+]
+
+2026-08-21 21:29:53 - INFO - cars_search - Отримано машин: 25, очікувалось: 25
+2026-08-21 21:29:53 - INFO - cars_search - Порядок за полем 'price': [28000, 29000, 30000, 31000, 32000, 32000, 33000, 35000, 40000, 40000, 45000, 45000, 46000, 48000, 50000, 52000, 55000, 55000, 60000, 70000, 80000, 250000, 280000, 300000, 350000]
+2026-08-21 21:29:53 - INFO - cars_search - GET /cars з параметрами: {'limit': 4}
+2026-08-21 21:29:53 - DEBUG - cars_search - URL запиту: http://127.0.0.1:8080/cars?limit=4
+2026-08-21 21:29:53 - DEBUG - cars_search - Статус: 200, тіло: [
+  {
+    "brand": "Acura",
+    "engine_volume": 2.4,
+    "price": 48000,
+    "year": 2020
+  },
+  {
+    "brand": "Audi",
+    "engine_volume": 1.8,
+    "price": 45000,
+    "year": 2020
+  },
+  {
+    "brand": "BMW",
+    "engine_volume": 2.0,
+    "price": 50000,
+    "year": 2018
+  },
+  {
+    "brand": "Bugatti",
+    "engine_volume": 8.0,
+    "price": 350000,
+    "year": 2019
+  }
+]
+
+2026-08-21 21:29:53 - INFO - cars_search - Отримано машин: 4, очікувалось: 4
+2026-08-21 21:29:53 - INFO - cars_search - Порядок за полем 'brand': ['Acura', 'Audi', 'BMW', 'Bugatti']
+2026-08-21 21:29:53 - INFO - cars_search - GET /cars з параметрами: {'sort_by': 'price'}
+2026-08-21 21:29:53 - DEBUG - cars_search - URL запиту: http://127.0.0.1:8080/cars?sort_by=price
+2026-08-21 21:29:53 - DEBUG - cars_search - Статус: 200, тіло: [
+  {
+    "brand": "Chevrolet",
+    "engine_volume": 1.8,
+    "price": 28000,
+    "year": 2018
+  },
+  {
+    "brand": "Hyundai",
+    "engine_volume": 1.6,
+    "price": 29000,
+    "year": 2020
+  },
+  {
+    "brand": "Honda",
+    "engine_volume": 1.6,
+    "price": 30000,
+    "year": 2016
+  },
+  {
+    "brand": "Kia",
+    "engine_volume": 2.0,
+    "price": 31000,
+    "year": 2019
+  },
+  {
+    "brand": "Ford",
+    "engine_volume": 2.2,
+    "price": 32000,
+    "year": 2015
+  },
+  {
+    "brand": "Mazda",
+    "engine_volume": 2.0,
+    "price": 32000,
+    "year": 2018
+  },
+  {
+    "brand": "Volkswagen",
+    "engine_volume": 2.0,
+    "price": 33000,
+    "year": 2019
+  },
+  {
+    "brand": "Toyota",
+    "engine_volume": 2.4,
+    "price": 35000,
+    "year": 2017
+  },
+  {
+    "brand": "Nissan",
+    "engine_volume": 1.5,
+    "price": 40000,
+    "year": 2021
+  },
+  {
+    "brand": "Subaru",
+    "engine_volume": 2.5,
+    "price": 40000,
+    "year": 2017
+  },
+  {
+    "brand": "Audi",
+    "engine_volume": 1.8,
+    "price": 45000,
+    "year": 2020
+  },
+  {
+    "brand": "Jeep",
+    "engine_volume": 3.6,
+    "price": 45000,
+    "year": 2018
+  },
+  {
+    "brand": "Volvo",
+    "engine_volume": 2.0,
+    "price": 46000,
+    "year": 2019
+  },
+  {
+    "brand": "Acura",
+    "engine_volume": 2.4,
+    "price": 48000,
+    "year": 2020
+  },
+  {
+    "brand": "BMW",
+    "engine_volume": 2.0,
+    "price": 50000,
+    "year": 2018
+  },
+  {
+    "brand": "Infiniti",
+    "engine_volume": 3.5,
+    "price": 52000,
+    "year": 2019
+  },
+  {
+    "brand": "Mercedes",
+    "engine_volume": 2.5,
+    "price": 55000,
+    "year": 2019
+  },
+  {
+    "brand": "Land Rover",
+    "engine_volume": 2.0,
+    "price": 55000,
+    "year": 2020
+  },
+  {
+    "brand": "Lexus",
+    "engine_volume": 3.0,
+    "price": 60000,
+    "year": 2021
+  },
+  {
+    "brand": "Porsche",
+    "engine_volume": 3.0,
+    "price": 70000,
+    "year": 2021
+  },
+  {
+    "brand": "Tesla",
+    "engine_volume": 0.0,
+    "price": 80000,
+    "year": 2020
+  },
+  {
+    "brand": "Ferrari",
+    "engine_volume": 6.3,
+    "price": 250000,
+    "year": 2021
+  },
+  {
+    "brand": "McLaren",
+    "engine_volume": 4.0,
+    "price": 280000,
+    "year": 2021
+  },
+  {
+    "brand": "Lamborghini",
+    "engine_volume": 6.5,
+    "price": 300000,
+    "year": 2020
+  },
+  {
+    "brand": "Bugatti",
+    "engine_volume": 8.0,
+    "price": 350000,
+    "year": 2019
+  }
+]
+
+2026-08-21 21:29:53 - INFO - cars_search - Отримано машин: 25, очікувалось: 25
+2026-08-21 21:29:53 - INFO - cars_search - Порядок за полем 'price': [28000, 29000, 30000, 31000, 32000, 32000, 33000, 35000, 40000, 40000, 45000, 45000, 46000, 48000, 50000, 52000, 55000, 55000, 60000, 70000, 80000, 250000, 280000, 300000, 350000]
+2026-08-21 21:29:53 - INFO - cars_search - GET /cars без токена - очікуємо 401
+2026-08-21 21:29:53 - DEBUG - cars_search - Статус: 401, тіло: {
+  "msg": "Missing Authorization Header"
+}
+
+2026-08-21 21:29:53 - INFO - cars_search - Teardown: закриваємо сесію
+2026-08-21 21:29:53 - INFO - cars_search - ============================== END TEST SESSION ==============================
+2026-08-21 21:38:19 - INFO - cars_search - ============================== START TEST SESSION ==============================
+2026-08-21 21:38:19 - INFO - cars_search - Setup: створюємо requests.Session і виконуємо POST /auth
+2026-08-21 21:38:19 - DEBUG - cars_search - POST /auth -> 200, body: {
+  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc4NzM0MTA5OSwianRpIjoiMjMzYWI2YzktYTIwZS00M2RhLTg3NTYtMDY1YTVmMzE1NzMzIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6InRlc3RfdXNlciIsIm5iZiI6MTc4NzM0MTA5OSwiY3NyZiI6ImY0NWYxZWFjLTA5YWYtNDgzZi1iZGEzLTlmZTcwZDI1NDI1MiIsImV4cCI6MTc4NzM0MTk5OX0.q_O6xk077ue1MAPIY6pZuCKOLok7bBXueWfBj1IzF28"
+}
+
+2026-08-21 21:38:19 - INFO - cars_search - Токен отримано, довжина: 336
+2026-08-21 21:38:19 - INFO - cars_search - GET /cars з параметрами: {'sort_by': 'price', 'limit': 5}
+2026-08-21 21:38:19 - DEBUG - cars_search - URL запиту: http://127.0.0.1:8080/cars?sort_by=price&limit=5
+2026-08-21 21:38:19 - DEBUG - cars_search - Статус: 200, тіло: [
+  {
+    "brand": "Chevrolet",
+    "engine_volume": 1.8,
+    "price": 28000,
+    "year": 2018
+  },
+  {
+    "brand": "Hyundai",
+    "engine_volume": 1.6,
+    "price": 29000,
+    "year": 2020
+  },
+  {
+    "brand": "Honda",
+    "engine_volume": 1.6,
+    "price": 30000,
+    "year": 2016
+  },
+  {
+    "brand": "Kia",
+    "engine_volume": 2.0,
+    "price": 31000,
+    "year": 2019
+  },
+  {
+    "brand": "Ford",
+    "engine_volume": 2.2,
+    "price": 32000,
+    "year": 2015
+  }
+]
+
+2026-08-21 21:38:19 - INFO - cars_search - Отримано машин: 5, очікувалось: 5
+2026-08-21 21:38:19 - INFO - cars_search - Порядок за полем 'price': [28000, 29000, 30000, 31000, 32000]
+2026-08-21 21:38:19 - INFO - cars_search - GET /cars з параметрами: {'sort_by': 'year', 'limit': 10}
+2026-08-21 21:38:19 - DEBUG - cars_search - URL запиту: http://127.0.0.1:8080/cars?sort_by=year&limit=10
+2026-08-21 21:38:19 - DEBUG - cars_search - Статус: 200, тіло: [
+  {
+    "brand": "Ford",
+    "engine_volume": 2.2,
+    "price": 32000,
+    "year": 2015
+  },
+  {
+    "brand": "Honda",
+    "engine_volume": 1.6,
+    "price": 30000,
+    "year": 2016
+  },
+  {
+    "brand": "Toyota",
+    "engine_volume": 2.4,
+    "price": 35000,
+    "year": 2017
+  },
+  {
+    "brand": "Subaru",
+    "engine_volume": 2.5,
+    "price": 40000,
+    "year": 2017
+  },
+  {
+    "brand": "BMW",
+    "engine_volume": 2.0,
+    "price": 50000,
+    "year": 2018
+  },
+  {
+    "brand": "Chevrolet",
+    "engine_volume": 1.8,
+    "price": 28000,
+    "year": 2018
+  },
+  {
+    "brand": "Mazda",
+    "engine_volume": 2.0,
+    "price": 32000,
+    "year": 2018
+  },
+  {
+    "brand": "Jeep",
+    "engine_volume": 3.6,
+    "price": 45000,
+    "year": 2018
+  },
+  {
+    "brand": "Mercedes",
+    "engine_volume": 2.5,
+    "price": 55000,
+    "year": 2019
+  },
+  {
+    "brand": "Volkswagen",
+    "engine_volume": 2.0,
+    "price": 33000,
+    "year": 2019
+  }
+]
+
+2026-08-21 21:38:19 - INFO - cars_search - Отримано машин: 10, очікувалось: 10
+2026-08-21 21:38:19 - INFO - cars_search - Порядок за полем 'year': [2015, 2016, 2017, 2017, 2018, 2018, 2018, 2018, 2019, 2019]
+2026-08-21 21:38:19 - INFO - cars_search - GET /cars з параметрами: {'sort_by': 'engine_volume', 'limit': 3}
+2026-08-21 21:38:19 - DEBUG - cars_search - URL запиту: http://127.0.0.1:8080/cars?sort_by=engine_volume&limit=3
+2026-08-21 21:38:19 - DEBUG - cars_search - Статус: 200, тіло: [
+  {
+    "brand": "Tesla",
+    "engine_volume": 0.0,
+    "price": 80000,
+    "year": 2020
+  },
+  {
+    "brand": "Nissan",
+    "engine_volume": 1.5,
+    "price": 40000,
+    "year": 2021
+  },
+  {
+    "brand": "Honda",
+    "engine_volume": 1.6,
+    "price": 30000,
+    "year": 2016
+  }
+]
+
+2026-08-21 21:38:19 - INFO - cars_search - Отримано машин: 3, очікувалось: 3
+2026-08-21 21:38:19 - INFO - cars_search - Порядок за полем 'engine_volume': [0.0, 1.5, 1.6]
+2026-08-21 21:38:19 - INFO - cars_search - GET /cars з параметрами: {'sort_by': 'brand', 'limit': 1}
+2026-08-21 21:38:19 - DEBUG - cars_search - URL запиту: http://127.0.0.1:8080/cars?sort_by=brand&limit=1
+2026-08-21 21:38:19 - DEBUG - cars_search - Статус: 200, тіло: [
+  {
+    "brand": "Acura",
+    "engine_volume": 2.4,
+    "price": 48000,
+    "year": 2020
+  }
+]
+
+2026-08-21 21:38:19 - INFO - cars_search - Отримано машин: 1, очікувалось: 1
+2026-08-21 21:38:19 - INFO - cars_search - Порядок за полем 'brand': ['Acura']
+2026-08-21 21:38:19 - INFO - cars_search - GET /cars з параметрами: {'sort_by': 'price', 'limit': 25}
+2026-08-21 21:38:19 - DEBUG - cars_search - URL запиту: http://127.0.0.1:8080/cars?sort_by=price&limit=25
+2026-08-21 21:38:19 - DEBUG - cars_search - Статус: 200, тіло: [
+  {
+    "brand": "Chevrolet",
+    "engine_volume": 1.8,
+    "price": 28000,
+    "year": 2018
+  },
+  {
+    "brand": "Hyundai",
+    "engine_volume": 1.6,
+    "price": 29000,
+    "year": 2020
+  },
+  {
+    "brand": "Honda",
+    "engine_volume": 1.6,
+    "price": 30000,
+    "year": 2016
+  },
+  {
+    "brand": "Kia",
+    "engine_volume": 2.0,
+    "price": 31000,
+    "year": 2019
+  },
+  {
+    "brand": "Ford",
+    "engine_volume": 2.2,
+    "price": 32000,
+    "year": 2015
+  },
+  {
+    "brand": "Mazda",
+    "engine_volume": 2.0,
+    "price": 32000,
+    "year": 2018
+  },
+  {
+    "brand": "Volkswagen",
+    "engine_volume": 2.0,
+    "price": 33000,
+    "year": 2019
+  },
+  {
+    "brand": "Toyota",
+    "engine_volume": 2.4,
+    "price": 35000,
+    "year": 2017
+  },
+  {
+    "brand": "Nissan",
+    "engine_volume": 1.5,
+    "price": 40000,
+    "year": 2021
+  },
+  {
+    "brand": "Subaru",
+    "engine_volume": 2.5,
+    "price": 40000,
+    "year": 2017
+  },
+  {
+    "brand": "Audi",
+    "engine_volume": 1.8,
+    "price": 45000,
+    "year": 2020
+  },
+  {
+    "brand": "Jeep",
+    "engine_volume": 3.6,
+    "price": 45000,
+    "year": 2018
+  },
+  {
+    "brand": "Volvo",
+    "engine_volume": 2.0,
+    "price": 46000,
+    "year": 2019
+  },
+  {
+    "brand": "Acura",
+    "engine_volume": 2.4,
+    "price": 48000,
+    "year": 2020
+  },
+  {
+    "brand": "BMW",
+    "engine_volume": 2.0,
+    "price": 50000,
+    "year": 2018
+  },
+  {
+    "brand": "Infiniti",
+    "engine_volume": 3.5,
+    "price": 52000,
+    "year": 2019
+  },
+  {
+    "brand": "Mercedes",
+    "engine_volume": 2.5,
+    "price": 55000,
+    "year": 2019
+  },
+  {
+    "brand": "Land Rover",
+    "engine_volume": 2.0,
+    "price": 55000,
+    "year": 2020
+  },
+  {
+    "brand": "Lexus",
+    "engine_volume": 3.0,
+    "price": 60000,
+    "year": 2021
+  },
+  {
+    "brand": "Porsche",
+    "engine_volume": 3.0,
+    "price": 70000,
+    "year": 2021
+  },
+  {
+    "brand": "Tesla",
+    "engine_volume": 0.0,
+    "price": 80000,
+    "year": 2020
+  },
+  {
+    "brand": "Ferrari",
+    "engine_volume": 6.3,
+    "price": 250000,
+    "year": 2021
+  },
+  {
+    "brand": "McLaren",
+    "engine_volume": 4.0,
+    "price": 280000,
+    "year": 2021
+  },
+  {
+    "brand": "Lamborghini",
+    "engine_volume": 6.5,
+    "price": 300000,
+    "year": 2020
+  },
+  {
+    "brand": "Bugatti",
+    "engine_volume": 8.0,
+    "price": 350000,
+    "year": 2019
+  }
+]
+
+2026-08-21 21:38:19 - INFO - cars_search - Отримано машин: 25, очікувалось: 25
+2026-08-21 21:38:19 - INFO - cars_search - Порядок за полем 'price': [28000, 29000, 30000, 31000, 32000, 32000, 33000, 35000, 40000, 40000, 45000, 45000, 46000, 48000, 50000, 52000, 55000, 55000, 60000, 70000, 80000, 250000, 280000, 300000, 350000]
+2026-08-21 21:38:19 - INFO - cars_search - GET /cars з параметрами: {'limit': 4}
+2026-08-21 21:38:19 - DEBUG - cars_search - URL запиту: http://127.0.0.1:8080/cars?limit=4
+2026-08-21 21:38:19 - DEBUG - cars_search - Статус: 200, тіло: [
+  {
+    "brand": "Acura",
+    "engine_volume": 2.4,
+    "price": 48000,
+    "year": 2020
+  },
+  {
+    "brand": "Audi",
+    "engine_volume": 1.8,
+    "price": 45000,
+    "year": 2020
+  },
+  {
+    "brand": "BMW",
+    "engine_volume": 2.0,
+    "price": 50000,
+    "year": 2018
+  },
+  {
+    "brand": "Bugatti",
+    "engine_volume": 8.0,
+    "price": 350000,
+    "year": 2019
+  }
+]
+
+2026-08-21 21:38:19 - INFO - cars_search - Отримано машин: 4, очікувалось: 4
+2026-08-21 21:38:19 - INFO - cars_search - Порядок за полем 'brand': ['Acura', 'Audi', 'BMW', 'Bugatti']
+2026-08-21 21:38:19 - INFO - cars_search - GET /cars з параметрами: {'sort_by': 'price'}
+2026-08-21 21:38:19 - DEBUG - cars_search - URL запиту: http://127.0.0.1:8080/cars?sort_by=price
+2026-08-21 21:38:19 - DEBUG - cars_search - Статус: 200, тіло: [
+  {
+    "brand": "Chevrolet",
+    "engine_volume": 1.8,
+    "price": 28000,
+    "year": 2018
+  },
+  {
+    "brand": "Hyundai",
+    "engine_volume": 1.6,
+    "price": 29000,
+    "year": 2020
+  },
+  {
+    "brand": "Honda",
+    "engine_volume": 1.6,
+    "price": 30000,
+    "year": 2016
+  },
+  {
+    "brand": "Kia",
+    "engine_volume": 2.0,
+    "price": 31000,
+    "year": 2019
+  },
+  {
+    "brand": "Ford",
+    "engine_volume": 2.2,
+    "price": 32000,
+    "year": 2015
+  },
+  {
+    "brand": "Mazda",
+    "engine_volume": 2.0,
+    "price": 32000,
+    "year": 2018
+  },
+  {
+    "brand": "Volkswagen",
+    "engine_volume": 2.0,
+    "price": 33000,
+    "year": 2019
+  },
+  {
+    "brand": "Toyota",
+    "engine_volume": 2.4,
+    "price": 35000,
+    "year": 2017
+  },
+  {
+    "brand": "Nissan",
+    "engine_volume": 1.5,
+    "price": 40000,
+    "year": 2021
+  },
+  {
+    "brand": "Subaru",
+    "engine_volume": 2.5,
+    "price": 40000,
+    "year": 2017
+  },
+  {
+    "brand": "Audi",
+    "engine_volume": 1.8,
+    "price": 45000,
+    "year": 2020
+  },
+  {
+    "brand": "Jeep",
+    "engine_volume": 3.6,
+    "price": 45000,
+    "year": 2018
+  },
+  {
+    "brand": "Volvo",
+    "engine_volume": 2.0,
+    "price": 46000,
+    "year": 2019
+  },
+  {
+    "brand": "Acura",
+    "engine_volume": 2.4,
+    "price": 48000,
+    "year": 2020
+  },
+  {
+    "brand": "BMW",
+    "engine_volume": 2.0,
+    "price": 50000,
+    "year": 2018
+  },
+  {
+    "brand": "Infiniti",
+    "engine_volume": 3.5,
+    "price": 52000,
+    "year": 2019
+  },
+  {
+    "brand": "Mercedes",
+    "engine_volume": 2.5,
+    "price": 55000,
+    "year": 2019
+  },
+  {
+    "brand": "Land Rover",
+    "engine_volume": 2.0,
+    "price": 55000,
+    "year": 2020
+  },
+  {
+    "brand": "Lexus",
+    "engine_volume": 3.0,
+    "price": 60000,
+    "year": 2021
+  },
+  {
+    "brand": "Porsche",
+    "engine_volume": 3.0,
+    "price": 70000,
+    "year": 2021
+  },
+  {
+    "brand": "Tesla",
+    "engine_volume": 0.0,
+    "price": 80000,
+    "year": 2020
+  },
+  {
+    "brand": "Ferrari",
+    "engine_volume": 6.3,
+    "price": 250000,
+    "year": 2021
+  },
+  {
+    "brand": "McLaren",
+    "engine_volume": 4.0,
+    "price": 280000,
+    "year": 2021
+  },
+  {
+    "brand": "Lamborghini",
+    "engine_volume": 6.5,
+    "price": 300000,
+    "year": 2020
+  },
+  {
+    "brand": "Bugatti",
+    "engine_volume": 8.0,
+    "price": 350000,
+    "year": 2019
+  }
+]
+
+2026-08-21 21:38:19 - INFO - cars_search - Отримано машин: 25, очікувалось: 25
+2026-08-21 21:38:19 - INFO - cars_search - Порядок за полем 'price': [28000, 29000, 30000, 31000, 32000, 32000, 33000, 35000, 40000, 40000, 45000, 45000, 46000, 48000, 50000, 52000, 55000, 55000, 60000, 70000, 80000, 250000, 280000, 300000, 350000]
+2026-08-21 21:38:19 - INFO - cars_search - GET /cars без токена - очікуємо 401
+2026-08-21 21:38:19 - DEBUG - cars_search - Статус: 401, тіло: {
+  "msg": "Missing Authorization Header"
+}
+
+2026-08-21 21:38:19 - INFO - cars_search - Teardown: закриваємо сесію
+2026-08-21 21:38:19 - INFO - cars_search - ============================== END TEST SESSION ==============================
+2026-08-21 21:38:19 - INFO - cars_search - ============================== START TEST SESSION ==============================
+2026-08-21 21:38:19 - INFO - cars_search - Setup: створюємо requests.Session і виконуємо POST /auth
+2026-08-21 21:38:19 - DEBUG - cars_search - POST /auth -> 200, body: {
+  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc4NzM0MTA5OSwianRpIjoiYTUwZmM1YTgtNTUwMy00ZmZkLWFkM2ItODFmNDI3MmE0Y2VjIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6InRlc3RfdXNlciIsIm5iZiI6MTc4NzM0MTA5OSwiY3NyZiI6IjcwMTIwYTMzLTJmODUtNDJlNy04MDliLWQ2ODA5NzdkOTA0NiIsImV4cCI6MTc4NzM0MTk5OX0.bquHEfTzsbV571WtzOvwgoTaryQqVnHaCvybqmy1NW8"
+}
+
+2026-08-21 21:38:19 - INFO - cars_search - Токен отримано, довжина: 336
+2026-08-21 21:38:19 - INFO - cars_search - GET /cars з параметрами: {'sort_by': 'price', 'limit': 5}
+2026-08-21 21:38:19 - DEBUG - cars_search - URL запиту: http://127.0.0.1:8080/cars?sort_by=price&limit=5
+2026-08-21 21:38:19 - DEBUG - cars_search - Статус: 200, тіло: [
+  {
+    "brand": "Chevrolet",
+    "engine_volume": 1.8,
+    "price": 28000,
+    "year": 2018
+  },
+  {
+    "brand": "Hyundai",
+    "engine_volume": 1.6,
+    "price": 29000,
+    "year": 2020
+  },
+  {
+    "brand": "Honda",
+    "engine_volume": 1.6,
+    "price": 30000,
+    "year": 2016
+  },
+  {
+    "brand": "Kia",
+    "engine_volume": 2.0,
+    "price": 31000,
+    "year": 2019
+  },
+  {
+    "brand": "Ford",
+    "engine_volume": 2.2,
+    "price": 32000,
+    "year": 2015
+  }
+]
+
+2026-08-21 21:38:19 - INFO - cars_search - Отримано машин: 5, очікувалось: 5
+2026-08-21 21:38:19 - INFO - cars_search - Порядок за полем 'price': [28000, 29000, 30000, 31000, 32000]
+2026-08-21 21:38:19 - INFO - cars_search - GET /cars з параметрами: {'sort_by': 'year', 'limit': 10}
+2026-08-21 21:38:19 - DEBUG - cars_search - URL запиту: http://127.0.0.1:8080/cars?sort_by=year&limit=10
+2026-08-21 21:38:19 - DEBUG - cars_search - Статус: 200, тіло: [
+  {
+    "brand": "Ford",
+    "engine_volume": 2.2,
+    "price": 32000,
+    "year": 2015
+  },
+  {
+    "brand": "Honda",
+    "engine_volume": 1.6,
+    "price": 30000,
+    "year": 2016
+  },
+  {
+    "brand": "Toyota",
+    "engine_volume": 2.4,
+    "price": 35000,
+    "year": 2017
+  },
+  {
+    "brand": "Subaru",
+    "engine_volume": 2.5,
+    "price": 40000,
+    "year": 2017
+  },
+  {
+    "brand": "BMW",
+    "engine_volume": 2.0,
+    "price": 50000,
+    "year": 2018
+  },
+  {
+    "brand": "Chevrolet",
+    "engine_volume": 1.8,
+    "price": 28000,
+    "year": 2018
+  },
+  {
+    "brand": "Mazda",
+    "engine_volume": 2.0,
+    "price": 32000,
+    "year": 2018
+  },
+  {
+    "brand": "Jeep",
+    "engine_volume": 3.6,
+    "price": 45000,
+    "year": 2018
+  },
+  {
+    "brand": "Mercedes",
+    "engine_volume": 2.5,
+    "price": 55000,
+    "year": 2019
+  },
+  {
+    "brand": "Volkswagen",
+    "engine_volume": 2.0,
+    "price": 33000,
+    "year": 2019
+  }
+]
+
+2026-08-21 21:38:19 - INFO - cars_search - Отримано машин: 10, очікувалось: 10
+2026-08-21 21:38:19 - INFO - cars_search - Порядок за полем 'year': [2015, 2016, 2017, 2017, 2018, 2018, 2018, 2018, 2019, 2019]
+2026-08-21 21:38:19 - INFO - cars_search - GET /cars з параметрами: {'sort_by': 'engine_volume', 'limit': 3}
+2026-08-21 21:38:19 - DEBUG - cars_search - URL запиту: http://127.0.0.1:8080/cars?sort_by=engine_volume&limit=3
+2026-08-21 21:38:19 - DEBUG - cars_search - Статус: 200, тіло: [
+  {
+    "brand": "Tesla",
+    "engine_volume": 0.0,
+    "price": 80000,
+    "year": 2020
+  },
+  {
+    "brand": "Nissan",
+    "engine_volume": 1.5,
+    "price": 40000,
+    "year": 2021
+  },
+  {
+    "brand": "Honda",
+    "engine_volume": 1.6,
+    "price": 30000,
+    "year": 2016
+  }
+]
+
+2026-08-21 21:38:19 - INFO - cars_search - Отримано машин: 3, очікувалось: 3
+2026-08-21 21:38:19 - INFO - cars_search - Порядок за полем 'engine_volume': [0.0, 1.5, 1.6]
+2026-08-21 21:38:19 - INFO - cars_search - GET /cars з параметрами: {'sort_by': 'brand', 'limit': 1}
+2026-08-21 21:38:19 - DEBUG - cars_search - URL запиту: http://127.0.0.1:8080/cars?sort_by=brand&limit=1
+2026-08-21 21:38:19 - DEBUG - cars_search - Статус: 200, тіло: [
+  {
+    "brand": "Acura",
+    "engine_volume": 2.4,
+    "price": 48000,
+    "year": 2020
+  }
+]
+
+2026-08-21 21:38:19 - INFO - cars_search - Отримано машин: 1, очікувалось: 1
+2026-08-21 21:38:19 - INFO - cars_search - Порядок за полем 'brand': ['Acura']
+2026-08-21 21:38:19 - INFO - cars_search - GET /cars з параметрами: {'sort_by': 'price', 'limit': 25}
+2026-08-21 21:38:19 - DEBUG - cars_search - URL запиту: http://127.0.0.1:8080/cars?sort_by=price&limit=25
+2026-08-21 21:38:19 - DEBUG - cars_search - Статус: 200, тіло: [
+  {
+    "brand": "Chevrolet",
+    "engine_volume": 1.8,
+    "price": 28000,
+    "year": 2018
+  },
+  {
+    "brand": "Hyundai",
+    "engine_volume": 1.6,
+    "price": 29000,
+    "year": 2020
+  },
+  {
+    "brand": "Honda",
+    "engine_volume": 1.6,
+    "price": 30000,
+    "year": 2016
+  },
+  {
+    "brand": "Kia",
+    "engine_volume": 2.0,
+    "price": 31000,
+    "year": 2019
+  },
+  {
+    "brand": "Ford",
+    "engine_volume": 2.2,
+    "price": 32000,
+    "year": 2015
+  },
+  {
+    "brand": "Mazda",
+    "engine_volume": 2.0,
+    "price": 32000,
+    "year": 2018
+  },
+  {
+    "brand": "Volkswagen",
+    "engine_volume": 2.0,
+    "price": 33000,
+    "year": 2019
+  },
+  {
+    "brand": "Toyota",
+    "engine_volume": 2.4,
+    "price": 35000,
+    "year": 2017
+  },
+  {
+    "brand": "Nissan",
+    "engine_volume": 1.5,
+    "price": 40000,
+    "year": 2021
+  },
+  {
+    "brand": "Subaru",
+    "engine_volume": 2.5,
+    "price": 40000,
+    "year": 2017
+  },
+  {
+    "brand": "Audi",
+    "engine_volume": 1.8,
+    "price": 45000,
+    "year": 2020
+  },
+  {
+    "brand": "Jeep",
+    "engine_volume": 3.6,
+    "price": 45000,
+    "year": 2018
+  },
+  {
+    "brand": "Volvo",
+    "engine_volume": 2.0,
+    "price": 46000,
+    "year": 2019
+  },
+  {
+    "brand": "Acura",
+    "engine_volume": 2.4,
+    "price": 48000,
+    "year": 2020
+  },
+  {
+    "brand": "BMW",
+    "engine_volume": 2.0,
+    "price": 50000,
+    "year": 2018
+  },
+  {
+    "brand": "Infiniti",
+    "engine_volume": 3.5,
+    "price": 52000,
+    "year": 2019
+  },
+  {
+    "brand": "Mercedes",
+    "engine_volume": 2.5,
+    "price": 55000,
+    "year": 2019
+  },
+  {
+    "brand": "Land Rover",
+    "engine_volume": 2.0,
+    "price": 55000,
+    "year": 2020
+  },
+  {
+    "brand": "Lexus",
+    "engine_volume": 3.0,
+    "price": 60000,
+    "year": 2021
+  },
+  {
+    "brand": "Porsche",
+    "engine_volume": 3.0,
+    "price": 70000,
+    "year": 2021
+  },
+  {
+    "brand": "Tesla",
+    "engine_volume": 0.0,
+    "price": 80000,
+    "year": 2020
+  },
+  {
+    "brand": "Ferrari",
+    "engine_volume": 6.3,
+    "price": 250000,
+    "year": 2021
+  },
+  {
+    "brand": "McLaren",
+    "engine_volume": 4.0,
+    "price": 280000,
+    "year": 2021
+  },
+  {
+    "brand": "Lamborghini",
+    "engine_volume": 6.5,
+    "price": 300000,
+    "year": 2020
+  },
+  {
+    "brand": "Bugatti",
+    "engine_volume": 8.0,
+    "price": 350000,
+    "year": 2019
+  }
+]
+
+2026-08-21 21:38:19 - INFO - cars_search - Отримано машин: 25, очікувалось: 25
+2026-08-21 21:38:19 - INFO - cars_search - Порядок за полем 'price': [28000, 29000, 30000, 31000, 32000, 32000, 33000, 35000, 40000, 40000, 45000, 45000, 46000, 48000, 50000, 52000, 55000, 55000, 60000, 70000, 80000, 250000, 280000, 300000, 350000]
+2026-08-21 21:38:19 - INFO - cars_search - GET /cars з параметрами: {'limit': 4}
+2026-08-21 21:38:19 - DEBUG - cars_search - URL запиту: http://127.0.0.1:8080/cars?limit=4
+2026-08-21 21:38:19 - DEBUG - cars_search - Статус: 200, тіло: [
+  {
+    "brand": "Acura",
+    "engine_volume": 2.4,
+    "price": 48000,
+    "year": 2020
+  },
+  {
+    "brand": "Audi",
+    "engine_volume": 1.8,
+    "price": 45000,
+    "year": 2020
+  },
+  {
+    "brand": "BMW",
+    "engine_volume": 2.0,
+    "price": 50000,
+    "year": 2018
+  },
+  {
+    "brand": "Bugatti",
+    "engine_volume": 8.0,
+    "price": 350000,
+    "year": 2019
+  }
+]
+
+2026-08-21 21:38:19 - INFO - cars_search - Отримано машин: 4, очікувалось: 4
+2026-08-21 21:38:19 - INFO - cars_search - Порядок за полем 'brand': ['Acura', 'Audi', 'BMW', 'Bugatti']
+2026-08-21 21:38:19 - INFO - cars_search - GET /cars з параметрами: {'sort_by': 'price'}
+2026-08-21 21:38:19 - DEBUG - cars_search - URL запиту: http://127.0.0.1:8080/cars?sort_by=price
+2026-08-21 21:38:19 - DEBUG - cars_search - Статус: 200, тіло: [
+  {
+    "brand": "Chevrolet",
+    "engine_volume": 1.8,
+    "price": 28000,
+    "year": 2018
+  },
+  {
+    "brand": "Hyundai",
+    "engine_volume": 1.6,
+    "price": 29000,
+    "year": 2020
+  },
+  {
+    "brand": "Honda",
+    "engine_volume": 1.6,
+    "price": 30000,
+    "year": 2016
+  },
+  {
+    "brand": "Kia",
+    "engine_volume": 2.0,
+    "price": 31000,
+    "year": 2019
+  },
+  {
+    "brand": "Ford",
+    "engine_volume": 2.2,
+    "price": 32000,
+    "year": 2015
+  },
+  {
+    "brand": "Mazda",
+    "engine_volume": 2.0,
+    "price": 32000,
+    "year": 2018
+  },
+  {
+    "brand": "Volkswagen",
+    "engine_volume": 2.0,
+    "price": 33000,
+    "year": 2019
+  },
+  {
+    "brand": "Toyota",
+    "engine_volume": 2.4,
+    "price": 35000,
+    "year": 2017
+  },
+  {
+    "brand": "Nissan",
+    "engine_volume": 1.5,
+    "price": 40000,
+    "year": 2021
+  },
+  {
+    "brand": "Subaru",
+    "engine_volume": 2.5,
+    "price": 40000,
+    "year": 2017
+  },
+  {
+    "brand": "Audi",
+    "engine_volume": 1.8,
+    "price": 45000,
+    "year": 2020
+  },
+  {
+    "brand": "Jeep",
+    "engine_volume": 3.6,
+    "price": 45000,
+    "year": 2018
+  },
+  {
+    "brand": "Volvo",
+    "engine_volume": 2.0,
+    "price": 46000,
+    "year": 2019
+  },
+  {
+    "brand": "Acura",
+    "engine_volume": 2.4,
+    "price": 48000,
+    "year": 2020
+  },
+  {
+    "brand": "BMW",
+    "engine_volume": 2.0,
+    "price": 50000,
+    "year": 2018
+  },
+  {
+    "brand": "Infiniti",
+    "engine_volume": 3.5,
+    "price": 52000,
+    "year": 2019
+  },
+  {
+    "brand": "Mercedes",
+    "engine_volume": 2.5,
+    "price": 55000,
+    "year": 2019
+  },
+  {
+    "brand": "Land Rover",
+    "engine_volume": 2.0,
+    "price": 55000,
+    "year": 2020
+  },
+  {
+    "brand": "Lexus",
+    "engine_volume": 3.0,
+    "price": 60000,
+    "year": 2021
+  },
+  {
+    "brand": "Porsche",
+    "engine_volume": 3.0,
+    "price": 70000,
+    "year": 2021
+  },
+  {
+    "brand": "Tesla",
+    "engine_volume": 0.0,
+    "price": 80000,
+    "year": 2020
+  },
+  {
+    "brand": "Ferrari",
+    "engine_volume": 6.3,
+    "price": 250000,
+    "year": 2021
+  },
+  {
+    "brand": "McLaren",
+    "engine_volume": 4.0,
+    "price": 280000,
+    "year": 2021
+  },
+  {
+    "brand": "Lamborghini",
+    "engine_volume": 6.5,
+    "price": 300000,
+    "year": 2020
+  },
+  {
+    "brand": "Bugatti",
+    "engine_volume": 8.0,
+    "price": 350000,
+    "year": 2019
+  }
+]
+
+2026-08-21 21:38:19 - INFO - cars_search - Отримано машин: 25, очікувалось: 25
+2026-08-21 21:38:19 - INFO - cars_search - Порядок за полем 'price': [28000, 29000, 30000, 31000, 32000, 32000, 33000, 35000, 40000, 40000, 45000, 45000, 46000, 48000, 50000, 52000, 55000, 55000, 60000, 70000, 80000, 250000, 280000, 300000, 350000]
+2026-08-21 21:38:19 - INFO - cars_search - GET /cars без токена - очікуємо 401
+2026-08-21 21:38:19 - DEBUG - cars_search - Статус: 401, тіло: {
+  "msg": "Missing Authorization Header"
+}
+
+2026-08-21 21:38:19 - INFO - cars_search - Teardown: закриваємо сесію
+2026-08-21 21:38:19 - INFO - cars_search - ============================== END TEST SESSION ==============================
