@@ -28,3 +28,4 @@ def saved_record(clean_table):
     """Один готовий запис у таблиці: 5! = 120."""
     record_id = clean_table.insert(5, "factorial", 120)
     return record_id
+
